@@ -3,9 +3,13 @@ import requests
 
 import openai
 import os
+import time
 from tqdm import tqdm
 
 from narakeet_api import AudioAPI
+
+test = False
+max_retries = 5
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
@@ -34,6 +38,7 @@ def get_link_content(url: str) -> str:
         'head',
         'input',
         'script',
+        'style',
         # there may be more elements you don't want, such as "style", etc.
     ]
 
@@ -44,15 +49,28 @@ def get_link_content(url: str) -> str:
     return output
 
 
-def make_gpt4_call(prompt: str) -> str:
-    completion = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[
-            {"role": "user", "content": prompt}
-        ]
-    )
+def make_gpt4_call(prompt: str, retry_attempt: int = 0) -> str:
+    print(prompt)
+    print("---------------------------------")
 
-    return completion.choices[0].message.content
+    try:
+        completion = openai.ChatCompletion.create(
+            model= "gpt-3.5-turbo" if test else "gpt-4",
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+
+        return completion.choices[0].message.content
+
+    except Exception as e:
+        if e.error.type == "server_error" and retry_attempt < max_retries:
+            print("Server error, retrying...")
+            time.sleep(2 ^ retry_attempt)
+            return make_gpt4_call(prompt, retry_attempt + 1)
+
+        else:
+            raise Exception("GPT-4 call failed", e)
 
 def get_hn_links():
     hn_url = 'https://news.ycombinator.com/'
@@ -86,11 +104,18 @@ def summarize_article(link, index: int) -> str:
     try:
         content = get_link_content(url)
     except:
-        content = f"Unfortunately, the article with the title {title} could not be downloaded. Perhaps it got too popular and the server is down. Who knows..."
+        content = f"Unfortunately, there's no text for the article with the title {title} as it could not be downloaded. Perhaps it got too popular and the server is down. Who knows..."
 
-    prompt = f"Imagine you are creating an article summary for an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. This is the text from article {index} out of {number_of_articles}:\n"
+    prompt = f"Imagine you are creating an article summary for an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. This is the text from article {index+1} out of {number_of_articles}:\n"
     prompt += f"{content}\n\n"
     prompt += "The text you generate will be used in the middle of the episode to talk about this article. The introduction to the episode was already written, so jump straight in and write just the summary of the article. Use an easy-to-follow and conversational style as you would in a podcast.\n\n"
+
+    return make_gpt4_call(prompt)
+
+def connect_summary_to_episode(index: int, title: str, summary: str, episode: str) -> str:
+    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. This is a summary of an article titled \"{title}\":\n"
+    prompt += f"{summary}\n\n"
+    prompt += f"Change the summary so that it fits well with the rest of the episode and add it at the end. This is a summary for article {index+1} of {number_of_articles}. The rest of the episode so far is:\n{episode}\n\n"
 
     return make_gpt4_call(prompt)
 
@@ -100,8 +125,10 @@ def generate_episode_text() -> str:
     print("Generating introduction...")
     transcript = create_introduction(links) + "\n\n"
     print("Summarising articles...")
-    summaries = [summarize_article(link, index) for index, link in tqdm(enumerate(links))]
-    transcript += "\n\n".join(summaries) + "\n\n"
+    for index, link in tqdm(enumerate(links)):
+        url, title = link
+        summary = summarize_article(link, index)
+        transcript += connect_summary_to_episode(index, title, summary, transcript) + "\n\n"
     print("Generating ending...")
     transcript += create_ending(transcript)
 
@@ -146,7 +173,10 @@ if __name__ == '__main__':
     text = generate_episode_text()
     print(text)
 
-    print("Generating episode audio...")
-    narrate_text(text)
+    if not test:
+        print("Generating episode audio...")
+        narrate_text(text)
+
+    print("Done!")
 
 
