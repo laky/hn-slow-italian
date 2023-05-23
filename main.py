@@ -8,45 +8,63 @@ from tqdm import tqdm
 
 from narakeet_api import AudioAPI
 
+import datetime
+
 test = False
+skip_generate_text = True
+skip_narration = False
 max_retries = 5
+max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters, so use 3000 for GPT3 for testing and 7000 for GPT4.
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
 number_of_articles = 5
 audio_format = "m4a"
+text_file = "/Users/lukasplatinsky/workspace/hn-slow-italian/output.txt"
 result_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/output.{audio_format}"
 
 narakeet_api_key = os.getenv("NARAKEET_API_KEY")
 voice = 'Ludovica'
 speed = 0.85
 
+playht_api_key = os.getenv("PLAYHT_API_KEY")
+playht_user_id = os.getenv("PLAYHT_USER_ID")
+playht_voice = 'it-IT-ElsaNeural'
 
-def get_link_content(url: str) -> str:
-    res = requests.get(url)
-    html_page = res.content
-    soup = BeautifulSoup(html_page, 'html.parser')
-    text = soup.find_all(text=True)
 
-    output = ''
-    blacklist = [
-        '[document]',
-        'noscript',
-        'header',
-        'html',
-        'meta',
-        'head',
-        'input',
-        'script',
-        'style',
-        # there may be more elements you don't want, such as "style", etc.
-    ]
+def get_link_content(url: str, retry_attempt: int = 0) -> str:
+    try:
+        res = requests.get(url)
+        html_page = res.content
+        soup = BeautifulSoup(html_page, 'html.parser')
+        text = soup.find_all(text=True)
 
-    for t in text:
-        if t.parent.name not in blacklist:
-            output += '{} '.format(t)
+        output = ''
+        blacklist = [
+            '[document]',
+            'noscript',
+            'header',
+            'html',
+            'meta',
+            'head',
+            'input',
+            'script',
+            'style',
+            # there may be more elements you don't want, such as "style", etc.
+        ]
 
-    return output
+        for t in text:
+            if t.parent.name not in blacklist:
+                output += '{} '.format(t)
+
+        return output[:max_article_length].strip()
+    except Exception as e:
+        if retry_attempt < max_retries:
+            print("Error downloading article, retrying...")
+            time.sleep(2 ^ retry_attempt)
+            return get_link_content(url, retry_attempt + 1)
+        else:
+            raise Exception("Article download failed", e)
 
 
 def make_gpt4_call(prompt: str, retry_attempt: int = 0) -> str:
@@ -61,6 +79,8 @@ def make_gpt4_call(prompt: str, retry_attempt: int = 0) -> str:
             ]
         )
 
+        print(completion.choices[0].message.content)
+        print("---------------------------------")
         return completion.choices[0].message.content
 
     except Exception as e:
@@ -70,7 +90,7 @@ def make_gpt4_call(prompt: str, retry_attempt: int = 0) -> str:
             return make_gpt4_call(prompt, retry_attempt + 1)
 
         else:
-            raise Exception("GPT-4 call failed", e)
+            raise Exception("GPT call failed", e)
 
 def get_hn_links():
     hn_url = 'https://news.ycombinator.com/'
@@ -84,11 +104,10 @@ def get_hn_links():
                 articles.append((link.get('href'), link.text))
     return articles[:number_of_articles]
 
-def create_introduction(links) -> str:
-    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. These are the article titles:\n"
-    for link, text in links:
-        prompt += f"- {text}\n"
-    prompt += "\nCreate a short introduction for the episode. Use an easy-to-follow and conversational style as you would in a podcast.\n\n"
+def create_introduction(episode) -> str:
+    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}.\n\n"
+    prompt += f"This is the content of the episode:\n{episode}\n\n"
+    prompt += "\nCreate a short introduction paragraph for the episode to get people excited about today's content. Use an easy-to-follow and conversational style as you would in a podcast.\n\n"
 
     return make_gpt4_call(prompt)
 
@@ -106,32 +125,21 @@ def summarize_article(link, index: int) -> str:
     except:
         content = f"Unfortunately, there's no text for the article with the title {title} as it could not be downloaded. Perhaps it got too popular and the server is down. Who knows..."
 
-    prompt = f"Imagine you are creating an article summary for an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. This is the text from article {index+1} out of {number_of_articles}:\n"
-    prompt += f"{content}\n\n"
-    prompt += "The text you generate will be used in the middle of the episode to talk about this article. The introduction to the episode was already written, so jump straight in and write just the summary of the article. Use an easy-to-follow and conversational style as you would in a podcast.\n\n"
-
-    return make_gpt4_call(prompt)
-
-def connect_summary_to_episode(index: int, title: str, summary: str, episode: str) -> str:
-    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. This is a summary of an article titled \"{title}\":\n"
-    prompt += f"{summary}\n\n"
-    prompt += f"Change the summary so that it fits well with the rest of the episode and add it at the end. This is a summary for article {index+1} of {number_of_articles}. The rest of the episode so far is:\n{episode}\n\n"
+    prompt = f"Create a summary of an article. Make the summary accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}.\n\n"
+    prompt += f"This is the text from the article:\n<text>{content}</text>\n\n"
+    prompt += f"Generate an engaging and in-depth summary (3-5 paragraphs long) in {language}. Use an easy-to-follow and conversational style. Start by mentioning the article's title \"{title}\"."
 
     return make_gpt4_call(prompt)
 
 def generate_episode_text() -> str:
     print("Getting links...")
     links = get_hn_links()
-    print("Generating introduction...")
-    transcript = create_introduction(links) + "\n\n"
     print("Summarising articles...")
-    for index, link in tqdm(enumerate(links)):
-        url, title = link
-        summary = summarize_article(link, index)
-        transcript += connect_summary_to_episode(index, title, summary, transcript) + "\n\n"
-    print("Generating ending...")
-    transcript += create_ending(transcript)
+    summaries = [summarize_article(link, index) for index, link in tqdm(enumerate(links))]
+    content = "\n\n(pause: 3)\n".join(summaries)
 
+    print("Generating beginning and ending...")
+    transcript = create_introduction(content) + "\n\n" + content + "\n\n" + create_ending(content)
     return transcript
 
 def show_progress(progress_data):
@@ -153,6 +161,25 @@ def narrate_text(text: str) -> str:
     else:
         raise Exception(task_result['message'])
 
+def playht_narrate(text):
+    url = "https://play.ht/api/v1/convert"
+
+    payload = {
+        "content": [text],
+        "voice": playht_voice,
+        "globalSpeed": "85",
+        "title": "hn-ep-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    }
+    headers = {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "AUTHORIZATION": playht_api_key,
+        "X-USER-ID": playht_user_id
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+    print(response.text)
+
 def get_an_episode() -> str:
     text = generate_episode_text()
     narration_url = narrate_text(text)
@@ -169,13 +196,18 @@ def test_get_links():
 
 
 if __name__ == '__main__':
-    print("Generating episode text...")
-    text = generate_episode_text()
-    print(text)
+    if not skip_generate_text:
+        print("Generating episode text...")
+        text = generate_episode_text()
+        with open(text_file, "w") as f:
+            f.write(text)
 
-    if not test:
-        print("Generating episode audio...")
-        narrate_text(text)
+    if not test and not skip_narration:
+        with open(text_file, "r") as f:
+            text = f.read()
+            print("Generating episode audio...")
+            # narrate_text(text)
+            playht_narrate(text)
 
     print("Done!")
 
