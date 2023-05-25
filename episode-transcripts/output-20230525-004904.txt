@@ -1,0 +1,58 @@
+Ciao amici e benvenuti a "Hacker News in Slow Italian", il podcast perfetto per chi sta imparando l'italiano e vuole conoscere gli articoli più interessanti di Hacker News! Nell'episodio di oggi, parleremo della Python Software Foundation e delle richieste di dati degli utenti, del lungo viaggio per recuperare il codice sorgente di Frogger 2 dai nastri magnetici, del nuovo logo di Thunderbird e di un'incredibile interfaccia cerebrale che fa camminare di nuovo le persone paralizzate. Infine, scopriremo la storia della velocità mozzafiato dell'SR-71 Blackbird. Preparatevi per un episodio ricco di informazioni e curiosità! Cominciamo!
+
+L'articolo "PyPI Was Subpoenaed" parla delle misure prese dal Python Software Foundation (PSF) in seguito alla ricezione di tre citazioni in giudizio per i dati degli utenti PyPI. Queste citazioni sono state emesse dal Dipartimento di Giustizia degli Stati Uniti e riguardano i dati di cinque utenti PyPI. Nonostante la PSF sia molto attenta alla privacy dei suoi utenti, ha stabilito, con il consiglio dei suoi avvocati, di dover fornire i dati richiesti.
+
+La PSF è ora impegnata a rivedere le proprie politiche in materia di dati e privacy per tenere conto degli interessi della comunità Python. Sebbene la fondazione raccolga pochissimi dati personali dagli utenti PyPI, qualsiasi dato detenuto in eccesso è comunque soggetto a richieste di questo tipo, oltre al rischio di base di compromissione dei dati a causa di atti illeciti o errori degli operatori. Perciò, la PSF sta sviluppando nuove politiche di conservazione e divulgazione dei dati riguardanti le procedure per future richieste di dati governativi, la durata della conservazione delle informazioni identificabili personali come i registri degli accessi degli utenti e politiche che rendano esplicite queste informazioni per gli utenti e la comunità.
+
+L'articolo fornisce anche dettagli sulle informazioni richieste nelle citazioni in giudizio, tra cui nomi, indirizzi, cronologia delle connessioni, durata delle sessioni e indirizzi di rete temporaneamente assegnati. Inoltre, sono state richieste informazioni sui servizi utilizzati, numeri di telefono, mezzi e fonti di pagamento e registri di tutti i pacchetti Python Package Index (PyPI) caricati dagli utenti in questione.
+
+La PSF continuerà a lavorare per garantire la libertà, la sicurezza e la privacy dei suoi utenti e invita a seguire il loro blog per ulteriori aggiornamenti sulle politiche che verranno finalizzate, pubblicate e implementate. Nel frattempo, l'organizzazione si impegna a proteggere i dati degli utenti e a garantire la trasparenza nelle sue azioni.
+
+
+
+Il lungo viaggio per recuperare il codice sorgente di Frogger 2 dai nastri magnetici.
+
+Il recupero dei dati da un nastro magnetico può essere un processo lungo e complicato, come dimostra la storia di recupero del codice sorgente di Frogger 2, uno dei giochi più famosi degli anni '90. Il primo passo è stato trovare un lettore di nastri compatibile, visto che la ditta che produceva i nastri e i lettori è fallita nel 2003. Dopo diversi tentativi e l'acquisto di diversi lettori, l'autore dell'articolo ha deciso di inviare il nastro a una società di recupero dati professionale.
+
+Purtroppo, la società ha danneggiato il nastro durante il processo di recupero, rendendo più difficile l'estrazione dei dati. L'autore ha quindi iniziato una ricerca per capire come recuperare le informazioni da solo, studiando l'interfaccia SCSI del lettore di nastri, cercando documentazione e brevetti sulle tecnologie utilizzate. Alla fine, ha scoperto che una parte dei dati era memorizzata in un'area del nastro che la documentazione ufficiale sosteneva non fosse utilizzabile per l'archiviazione dei dati.
+
+Grazie alla sua determinazione e alle sue competenze tecniche, l'autore è riuscito a sviluppare un programma per estrarre i dati dal nastro danneggiato, scoprendo anche che il software utilizzato per scrivere i dati utilizzava un metodo non documentato. Dopo mesi di lavoro, è riuscito a recuperare il 99% dei file dal nastro, permettendo così la conservazione del codice sorgente e degli asset di Frogger 2. La storia di questo recupero dimostra l'importanza della conservazione dei dati e la necessità di avere competenze tecniche per affrontare situazioni complesse come questa.
+
+
+Il nuovo logo di Thunderbird è stato finalmente svelato! Dopo quasi 20 anni, i creatori sono orgogliosi di presentare un logo completamente ridisegnato che onora la storia e la stretta connessione con Mozilla, e allo stesso tempo ci proietta verso i prossimi 20 anni.
+
+Negli ultimi anni, Thunderbird ha goduto di una rinascita e ora il progetto prospera con un rinnovato senso di scopo. Si percepisce un'energia rigenerante proveniente dagli utenti, dalla comunità di collaboratori e dal team centrale.
+
+Il logo attuale di Thunderbird, come il software, ha visto piccoli miglioramenti iterativi negli ultimi 20 anni. Ma adesso il software si sta evolvendo in qualcosa di più moderno (mantenendo le sue potenti funzionalità di personalizzazione) e i creatori ritengono che meriti un logo fresco che rappresenti adeguatamente questa rivitalizzazione.
+
+Per realizzare il nuovo logo, si è chiesto a Jon Hicks, il creatore dei loghi originali di Firefox e Thunderbird, di re-immaginare il suo design iconico alla luce del futuro emozionante di Thunderbird. Il risultato è un logo che rinnova l'immagine di Thunderbird su Linux, Windows, macOS, Android e iOS.
+
+L'integrazione del nuovo logo in Thunderbird avverrà con la versione 115 (nome in codice "Supernova") quest'estate. Nel corso dei prossimi mesi, verrà anche ridisegnato il sito web e aggiornato il branding sui vari canali social e piattaforme di comunicazione.
+
+I creatori di Thunderbird sanno che il cambiamento può essere scomodo, ma sperano che il nuovo look sia un segno positivo per il progetto. Invitano tutti a familiarizzare con il nuovo design e a condividere il loro pensiero dopo qualche giorno. Il vecchio logo di Thunderbird (che Ryan Sipes, il Product Manager, chiama affettuosamente "la parrucca su una busta") sarà sempre nel cuore di tutti, ma il progetto sta cambiando in modo importante e positivo, e si vuole mostrare questo al mondo con un logo ed un'icona rinnovati e splendidi.
+
+In conclusione, il team di Thunderbird guarda al futuro con ottimismo e ringrazia tutti coloro che li hanno accompagnati in questo viaggio. Senza di loro, non sarebbero arrivati fino a qui.
+
+
+Il recente articolo dal titolo "Walking naturally after spinal cord injury using a brain–spine interface" (Camminare naturalmente dopo un danno al midollo spinale usando un'interfaccia cervello-midollo) parla di un incredibile sviluppo tecnologico che aiuta le persone paralizzate a camminare di nuovo. Grazie a un'interfaccia cervello-midollo spinale (BSI), gli scienziati sono riusciti a far camminare una persona con tetraplegia cronica in ambienti comunitari.
+
+Il BSI funziona stabilendo un ponte digitale tra il cervello e il midollo spinale attraverso una serie di impianti di registrazione e stimolazione. Questi impianti permettono un collegamento diretto tra i segnali corticali e la modulazione elettrica epidurale del midollo spinale, coinvolgendo le aree responsabili della produzione del movimento. La tecnica si basa sull'utilizzo di elettrodi per monitorare l'attività cerebrale e inviare segnali al midollo spinale.
+
+Il paziente coinvolto nello studio, un uomo di 38 anni con una lesione al midollo spinale al livello C5/C6, ha sperimentato risultati positivi con l'utilizzo del BSI. Dopo un periodo di calibrazione, il paziente è stato in grado di controllare in modo naturale e intuitivo i suoi movimenti mentre camminava. Il BSI gli ha anche permesso di affrontare terreni complessi, come salire e scendere rampe e scalinate.
+
+Il BSI si è dimostrato efficace anche nel promuovere il recupero neurologico. Dopo aver completato un programma di neuroriabilitazione supportato dal BSI, il paziente è stato in grado di camminare con stampelle anche quando il dispositivo era spento. Questo studio dimostra l'enorme potentialità della BSI per migliorare la qualità della vita delle persone con paralisi.
+
+In conclusione, l'interfaccia cervello-midollo spinale offre una soluzione rivoluzionaria per aiutare le persone paralizzate a camminare nuovamente. Con ulteriori ricerche e sviluppi, questa tecnologia potrebbe avere un impatto significativo sulle vite di molte persone affette da lesioni al midollo spinale e altre disabilità del movimento.
+
+
+L'articolo "SR-71 Blackbird Speed Check Story" racconta la storia del velivolo SR-71 Blackbird, uno degli aerei più veloci mai costruiti. Questo aereo era incredibilmente potente e veloce, ma non era facile da pilotare. L'articolo descrive una giornata particolare e memorabile durante l'addestramento dei piloti del Blackbird, in cui si sono divertiti a sfidare la velocità di altri aerei.
+
+Il racconto inizia con la descrizione di un volo di addestramento su uno SR-71 Blackbird, durante il quale i piloti ascoltavano le comunicazioni radio tra vari aerei e le torri di controllo. Un pilota di un piccolo aereo Cessna chiede la sua velocità al suolo, e riceve risposta che sta volando a 90 nodi. Poco dopo, un altro pilota su un Beechcraft chiede la stessa informazione e ottiene una risposta di 125 nodi.
+
+Poi, un pilota di un aereo da caccia F-18 della Marina degli Stati Uniti si unisce alla conversazione, chiedendo anche lui la propria velocità al suolo. Il controllore del traffico aereo risponde con un tono professionale, "Dusty 52, abbiamo registrato una velocità di 620 nodi". Il pilota dell'SR-71, sentendo queste conversazioni, decide di svelare la velocità mozzafiato del suo aereo.
+
+Il pilota del Blackbird chiede quindi alla torre di controllo di verificare la sua velocità al suolo. Con sua grande soddisfazione, il controllore risponde prontamente: "Aspen 20, la vostra velocità al suolo è di 1.842 nodi". Il pilota del Blackbird ringrazia il controllore e aggiunge, con voce sicura, che stanno volando più vicino ai 1.900 nodi.
+
+La storia si conclude con il silenzio radio degli altri aerei, che riconoscono la superiorità del Blackbird in termini di velocità. Almeno per quel giorno, i piloti dell'SR-71 Blackbird erano diventati gli "eroi" del cielo, mentre gli altri aerei erano costretti a inchinarsi di fronte al "re della velocità".
+
+Ecco fatto, questo è tutto per l'episodio di oggi di "Hacker News in Slow Italian". Speriamo che abbiate apprezzato le notizie e che queste brevi storie vi siano state utili per migliorare il vostro ascolto e la comprensione della lingua italiana. Non dimenticate di seguirci e di condividere il podcast con i vostri amici e compagni di studio. Alla prossima puntata! Ciao a tutti e buon ascolto!
