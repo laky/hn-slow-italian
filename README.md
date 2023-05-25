@@ -1,4 +1,4 @@
-# Hacker News in SLow Italian
+# Hacker News in Slow Italian
 Hacker News in Slow Italian - The most interesting tech content in a language accessible for learners
 
 To run, install prerequisits and define on your command line:
