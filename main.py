@@ -18,12 +18,17 @@ max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters,
 openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
 number_of_articles = 5
-text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episodes/hn-ep-transcript-{date_time_string}.txt"
+text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episode-transcripts/hn-ep-transcript-{date_time_string}.txt"
 file_audio = "hn-ep-audio" + date_time_string
 
 playht_api_key = os.getenv("PLAYHT_API_KEY")
 playht_user_id = os.getenv("PLAYHT_USER_ID")
 playht_voice = 'it-IT-ElsaNeural'
+
+denylist_urls = [
+    "val.town", # Seems not to parse well...
+    "lightning.ai/pages/blog", # Forbidden :( TODO: handle these errors better
+]
 
 
 def get_link_content(url: str, retry_attempt: int = 0) -> str:
@@ -34,7 +39,7 @@ def get_link_content(url: str, retry_attempt: int = 0) -> str:
         text = soup.find_all(text=True)
 
         output = ''
-        blacklist = [
+        denylist = [
             '[document]',
             'noscript',
             'header',
@@ -47,7 +52,7 @@ def get_link_content(url: str, retry_attempt: int = 0) -> str:
         ]
 
         for t in text:
-            if t.parent.name not in blacklist:
+            if t.parent.name not in denylist:
                 output += '{} '.format(t)
 
         # TODO: Currently long articles are chopped off to fit the GPT limits. May want to address this at some point.
@@ -94,8 +99,14 @@ def get_hn_links():
     links = soup.find_all('a')
     articles = []
     for link in links:
-        if link.get('href')[:4] == 'http' and link.get('href')[:29] != 'https://news.ycombinator.com' and link.get('href')[:28] != 'https://www.ycombinator.com/':
-                articles.append((link.get('href'), link.text))
+        # Skip YC links and PDFs
+        if link.get('href')[:4] == 'http' and link.get('href')[:29] != 'https://news.ycombinator.com' and link.get('href')[:28] != 'https://www.ycombinator.com/' and "[pdf]" not in link.text:
+                skip = False
+                for url in denylist_urls:
+                    if url in link.get('href'):
+                        skip = True
+                if not skip:
+                    articles.append((link.get('href'), link.text))
     return articles[:number_of_articles]
 
 def create_introduction(episode) -> str:
@@ -130,7 +141,7 @@ def generate_episode_text() -> str:
     links = get_hn_links()
     print("Summarising articles...")
     summaries = [summarize_article(link, index) for index, link in tqdm(enumerate(links))]
-    content = "\n\n(pause: 3)\n".join(summaries)
+    content = "\n\n".join(summaries)
 
     print("Generating beginning and ending...")
     transcript = create_introduction(content) + "\n\n" + content + "\n\n" + create_ending(content)
