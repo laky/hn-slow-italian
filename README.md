@@ -11,6 +11,6 @@ Note, this requires accounts for Open AI and Play.HT. Running this will incur co
 
 This is a very quick and dirty implementation, errors when accessing the websites need to be handled better etc. Use at your own risk. 
 
-Go to https://hn.lingually.ai/ to learn more.
+Go to https://hn.lingually.ai/ to learn more and find the latest episode.
 
 Follow and give feedback at https://twitter.com/LinguallyAI.
