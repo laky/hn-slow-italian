@@ -1,0 +1,57 @@
+Benvenuti ad un nuovo episodio di "Hacker News in Slow Italian"! Oggi abbiamo una selezione di articoli davvero interessanti per voi. Parleremo di un progetto che combina il protocollo Raft con il linguaggio Go, l'importanza degli indici nel mondo dei dati, uno straordinario ritrovamento di libri e manoscritti medievali in una chiesa rumena, un servizio pratico per rimuovere gli sfondi delle immagini senza abbonamenti fastidiosi e, infine, l'inaspettato successo dei nastri come supporto di memoria. Siete pronti per immergervi nelle storie di oggi? Allacciate le cinture e preparatevi a esplorare il mondo affascinante della tecnologia, della storia e di più, il tutto in un italiano lento e accessibile. Iniziamo!
+
+L'articolo dal titolo "Implementing a distributed key-value store on top of implementing Raft in Go" di Eatonphil descrive come l'autore ha costruito un sistema di memorizzazione distribuito chiave-valore utilizzando il protocollo Raft e il linguaggio di programmazione Go. Il protocollo Raft viene utilizzato per raggiungere il consenso all'interno di un gruppo di nodi e garantire la consistenza delle operazioni nell'ambito di un sistema distribuito, mentre Go è stato scelto per le sue doti di efficienza e semplicità. Lo scopo del progetto è di comprendere come funzionano i protocolli di consenso distribuito e come costruire un database chiave-valore distribuito attorno a questi concetti.
+
+Il semplificato sistema distribuito chiave-valore è basato su due componenti principali: l'elezione del leader e la replicazione del log. Dopo aver letto e compreso l'algoritmo Raft, l'autore spiega come ha modellato il database chiave-valore utilizzando una state machine e ha costruito delle API HTTP per consentire agli utenti di interagire con il cluster Raft.
+
+Per implementare il protocollo Raft, l'autore introduce diversi tipi e funzioni Go per modellare lo stato persistente, lo stato volatile e le operazioni di lettura e scrittura dei nodi nel cluster. La logica principale del protocollo viene gestita nel ciclo principale del server, con diverse funzioni che implementano diversi aspetti del protocollo, come l'elezione del leader, la richiesta e il trattamento dei voti e l'avanzamento dell'indice di commit.
+
+L'articolo illustra anche come l'autore ha ottimizzato l'implementazione del protocollo Raft, passando da un'implementazione basata su "encoding/gob" all'utilizzo dell'encoding binario customizzato per ridurre al minimo l'overhead nella memorizzazione delle informazioni. Inoltre, l'autore descrive come ha implementato l'operazione di ripristino delle informazioni dal disco, utilizzando un approccio efficiente che tiene conto delle sole voci di log che devono essere scritte.
+
+Nel complesso, l'articolo fornisce una panoramica interessante e approfondita di come costruire un sistema distribuito chiave-valore utilizzando il protocollo Raft e il linguaggio di programmazione Go, illustrando passo dopo passo le sfide e le soluzioni adottate. Il progetto è un ottimo esempio dell'applicazione dei principi di consenso distribuito e di come questi possano essere utilizzati per garantire la consistenza delle informazioni e delle operazioni all'interno di un sistema distribuito.
+
+Titolo: Non hai sempre bisogno degli indici
+
+A volte, quando hai molti dati, un approccio per velocizzare le ricerche è pre-elaborarli e creare un indice, così da esaminare solo una piccola parte dei dati totali. Tuttavia, la soglia a cui vale la pena passare all'indicizzazione potrebbe essere più alta di quanto si pensi. Ecco alcuni casi in cui una scansione completa dei dati è stata una scelta migliore dal punto di vista ingegneristico:
+
+Dieci anni fa, l'autore dell'articolo ha creato un'applicazione di messaggistica interna per un piccolo servizio di fatturazione. I messaggi erano memorizzati in MySQL e l'autore avrebbe aggiunto l'indicizzazione se le ricerche a testo pieno fossero diventate lente o se ci fossero stati problemi di carico. Ma anche con dieci anni di messaggi da cercare, l'applicazione è rimasta reattiva.
+
+Di recente, l'autore ha trovato qualcuno che manteniva un indice di testo completo di 0,5 GB per cercare nella cronologia dei comandi del suo terminale. Al contrario, l'autore utilizza "grep" su un file piatto e, testando ora, ci vogliono 200 ms per una ricerca attraverso le sue 180.000 voci di cronologia.
+
+Il consiglio dell'autore è, a meno che non si sappia fin dall'inizio che si cercheranno centinaia di milioni di record, di iniziare con semplici scansioni e aggiungere solo l'indicizzazione se non si riesce ad ottenere prestazioni accettabili. E anche in questo caso, se le ricerche sono rare e molto varie, potrebbe essere ancora meglio fare il lavoro al momento della ricerca invece che al momento dell'ingestione dei dati.
+
+Titolo dell'articolo: "Archivio di libri e manoscritti medievali scoperto in una chiesa rumena"
+
+È stato scoperto un archivio dimenticato di libri e manoscritti medievali in una chiesa in Romania. In una chiesa di Mediaș, in Romania, i ricercatori hanno trovato oltre 200 libri e manoscritti. Alcuni di questi risalgono al IX secolo. Gli esperti della Biblioteca Batthyaneum, una sede della Biblioteca Nazionale di Romania, hanno annunciato la scoperta su Facebook.
+
+I tesori trovati risalgono a diversi secoli. Tra questi, ci sono 139 libri stampati tra il 1470 e il 1600, due manoscritti del XVI secolo e circa sessanta documenti tra il XIV e il XVI secolo. Inoltre, sono stati scoperti dei frammenti di manoscritti all'interno dei registri parrocchiali, il più antico dei quali potrebbe risalire al IX secolo.
+
+La chiesa di Santa Margherita, dove è stata fatta la scoperta, è stata fondata dai Sassoni di Transilvania nel XV secolo. La collezione di libri sembra essere stata dimenticata nella torre della chiesa per molti decenni. Si pensa che siano stati nascosti lì per proteggerli durante la prima o la seconda guerra mondiale.
+
+Gli studiosi stanno lavorando per capire meglio la storia e l'importanza della collezione e per preservarla. Sperano di tenere i manoscritti in una biblioteca locale e di digitalizzarli per renderli più accessibili a tutti. Secondo il professor Dincă, che dirige il team di ricerca, questa scoperta permetterà di ricostruire meglio la vita intellettuale dei Sassoni di Transilvania e la tradizione dei manoscritti medievali della zona.
+
+Questo è solo l'inizio della ricerca, ma i ricercatori sono entusiasti delle scoperte già fatte, come la grande quantità di legature originali del XVI secolo e alcuni frammenti di manoscritti medievali. La scoperta è stata paragonata a una storia di Indiana Jones e sicuramente offre uno sguardo affascinante nel passato.
+
+Titolo: Rimozione dello sfondo delle immagini senza fastidiose sottoscrizioni
+
+Pixian.AI è un servizio online di rimozione dello sfondo delle immagini senza la necessità di sottoscrivere un abbonamento. Questo strumento è molto utile per coloro che desiderano rimuovere gli sfondi dalle loro foto in modo rapido e semplice. L'utilizzo di Pixian.AI è gratuito durante il periodo beta e il servizio offrirà pacchetti a lungo termine in stile Pay-As-You-Go, senza canoni mensili o minimi e senza abbonamenti, una volta terminata la fase beta.
+
+Per utilizzare Pixian.AI, basta trascinare e rilasciare un'immagine sulla pagina Web e il servizio inizierà a elaborare l'immagine utilizzando potenti GPU e CPU multicore per rimuovere lo sfondo. Successivamente, è possibile esaminare un'anteprima del risultato e scaricarlo gratuitamente durante la fase beta. Il livello di qualità di Pixian.AI è stato paragonato a quello dei servizi concorrenti attraverso il confronto di un campione di immagini fornite dagli utenti.
+
+Pixian.AI si distingue per la sua filosofia che abbraccia la rapidità con cui l'intelligenza artificiale si sta diffondendo e diventando un bene di uso comune. L'obiettivo è quello di rendere la rimozione dello sfondo accessibile a professionisti e appassionati di grafica a un prezzo ragionevole e di permettere l'utilizzo della rimozione dello sfondo in siti Web e app finanziati attraverso la pubblicità.
+
+Il servizio supporta diversi formati di file come JPEG, PNG, BMP, GIF e WebP come input e produce immagini in formato PNG come output. La dimensione massima dell'immagine per il sito Web è di 8 megapixel, mentre per l'API è di 25 megapixel. Il servizio rimarrà in beta fino al secondo o terzo trimestre del 2023, dopodiché verranno applicate le tariffe.
+
+In conclusione, Pixian.AI è uno strumento online efficace e conveniente per rimuovere gli sfondi delle immagini senza dover sottoscrivere abbonamenti fastidiosi. Con la sua filosofia orientata all'accessibilità e alla qualità, Pixian.AI si propone di essere la scelta ideale per chiunque cerchi un servizio di rimozione dello sfondo semplice e conveniente.
+
+Il titolo dell'articolo è "Tape Storage Trundles On, Increases Yearly Volume to 128 Exabytes". In questo testo si parla della continua utilità del nastro come supporto di memoria, nonostante tecnologie più avanzate siano ormai disponibili sul mercato. Il nastro viene ancora utilizzato per la sua affidabilità e il suo basso costo.
+
+Il gruppo LTO, composto da aziende specializzate nella produzione di nastri, ha registrato un aumento del 5% nelle vendite rispetto allo stesso periodo dell'anno scorso. Questo dato dimostra come questa tecnologia non sia ancora in via di estinzione. La crescita del 40% del volume di vendite rispetto all'anno precedente supporta ulteriormente tale affermazione.
+
+La veloce adozione della tecnologia LTO-9 è un altro segnale del successo di questa tecnologia. LTO-8 è ancora molto apprezzato per la sua capacità di 30 TB e velocità di trasferimento di dati fino a 750 MB/s. Tuttavia, LTO-9 ha migliorato la densità dei dati compressi (fino a 45 TB) e le velocità di trasferimento (fino a 900 MB/s).
+
+Le vendite totali di nastri sono in diminuzione, ma la capacità di un nastro attuale è molto più elevata rispetto a quella di un nastro del passato. Per esempio, un nastro LTO-5 offre soltanto 1,5 TB di capacità compressa. La capacità è importante, non il numero di unità vendute.
+
+In conclusione, il nastro non è morto e la richiesta di soluzioni di memoria economiche e affidabili è ancora in crescita. Le aziende e gli utenti privati continueranno a utilizzare questa tecnologia fino a quando non sarà completamente sostituita da soluzioni più avanzate e convenienti.
+
+E questo, amici, è tutto per l'episodio di oggi di "Hacker News in Slow Italian". Spero che vi siate divertiti ed abbiate imparato qualcosa di nuovo. Ricordate di rimanere curiosi, continuare a esplorare il mondo della tecnologia e, ovviamente, praticare il vostro italiano. Ci sentiamo nel prossimo episodio! Ciao a tutti e buon ascolto!
