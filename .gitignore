@@ -1,6 +1,6 @@
 *.api_keys
 *.m4a
-output.*
+*.mp3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

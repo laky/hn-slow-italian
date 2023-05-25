@@ -6,12 +6,11 @@ import os
 import time
 from tqdm import tqdm
 
-from narakeet_api import AudioAPI
-
 import datetime
+date_time_string = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 
 test = False
-skip_generate_text = True
+skip_generate_text = False
 skip_narration = False
 max_retries = 5
 max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters, so use 3000 for GPT3 for testing and 7000 for GPT4.
@@ -19,13 +18,8 @@ max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters,
 openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
 number_of_articles = 5
-audio_format = "m4a"
-text_file = "/Users/lukasplatinsky/workspace/hn-slow-italian/output.txt"
-result_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/output.{audio_format}"
-
-narakeet_api_key = os.getenv("NARAKEET_API_KEY")
-voice = 'Ludovica'
-speed = 0.85
+text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episodes/hn-ep-transcript-{date_time_string}.txt"
+file_audio = "hn-ep-audio" + date_time_string
 
 playht_api_key = os.getenv("PLAYHT_API_KEY")
 playht_user_id = os.getenv("PLAYHT_USER_ID")
@@ -50,13 +44,13 @@ def get_link_content(url: str, retry_attempt: int = 0) -> str:
             'input',
             'script',
             'style',
-            # there may be more elements you don't want, such as "style", etc.
         ]
 
         for t in text:
             if t.parent.name not in blacklist:
                 output += '{} '.format(t)
 
+        # TODO: Currently long articles are chopped off to fit the GPT limits. May want to address this at some point.
         return output[:max_article_length].strip()
     except Exception as e:
         if retry_attempt < max_retries:
@@ -142,33 +136,14 @@ def generate_episode_text() -> str:
     transcript = create_introduction(content) + "\n\n" + content + "\n\n" + create_ending(content)
     return transcript
 
-def show_progress(progress_data):
-    # change this to do something smarter with percent, message and thumbnail
-    print(progress_data)
-
-def narrate_text(text: str) -> str:
-    api = AudioAPI(narakeet_api_key)
-
-    # start a build task using the text sample and voice
-    # and wait for it to finish
-    task = api.request_audio_task(audio_format, text, voice, speed)
-    task_result = api.poll_until_finished(task['statusUrl'], show_progress)
-
-    # grab the result file
-    if task_result['succeeded']:
-        api.download_to_file(task_result['result'], result_file)
-        print(f'downloaded to {result_file}')
-    else:
-        raise Exception(task_result['message'])
-
 def playht_narrate(text):
     url = "https://play.ht/api/v1/convert"
 
     payload = {
-        "content": [text],
+        "content": [s for s in text.split("\n") if len(s) > 0],
         "voice": playht_voice,
         "globalSpeed": "85",
-        "title": "hn-ep-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+        "title": file_audio,
     }
     headers = {
         "accept": "application/json",
@@ -180,20 +155,15 @@ def playht_narrate(text):
     response = requests.post(url, json=payload, headers=headers)
     print(response.text)
 
-def get_an_episode() -> str:
-    text = generate_episode_text()
-    narration_url = narrate_text(text)
-
-    return text, narration_url
-
-def test_download_article():
-    url = 'https://www.engineersneedart.com/blog/samestop/samestop.html'
-    print(get_link_content(url))
-
-def test_get_links():
-    for link, text in get_hn_links():
-        print(text, link)
-
+    # TODO: Poll until finished, then download.
+    url = "https://play.ht/api/v1/articleStatus?transcriptionId=-NOjGbpFU1Exf3DxhLHU"
+    headers = {
+        "accept": "application/json",
+        "AUTHORIZATION": playht_api_key,
+        "X-USER-ID": playht_user_id
+    }
+    response = requests.get(url, headers=headers)
+    print(response.text)
 
 if __name__ == '__main__':
     if not skip_generate_text:
@@ -205,8 +175,8 @@ if __name__ == '__main__':
     if not test and not skip_narration:
         with open(text_file, "r") as f:
             text = f.read()
+
             print("Generating episode audio...")
-            # narrate_text(text)
             playht_narrate(text)
 
     print("Done!")
