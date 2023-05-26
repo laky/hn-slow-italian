@@ -16,14 +16,15 @@ max_retries = 5
 max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters, so use 3000 for GPT3 for testing and 7000 for GPT4.
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-language = "Italian"
+language = "Spanish"
 number_of_articles = 5
-text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episode-transcripts/hn-ep-transcript-{date_time_string}.txt"
-file_audio = "hn-ep-audio" + date_time_string
+text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episode-transcripts/hn-ep-{language}-transcript-{date_time_string}.txt"
+file_audio = f"hn-ep-{language}-audio" + date_time_string
 
 playht_api_key = os.getenv("PLAYHT_API_KEY")
 playht_user_id = os.getenv("PLAYHT_USER_ID")
 playht_voice = 'it-IT-ElsaNeural'
+playht_voice = "es-ES_LauraV3Voice"
 
 denylist_urls = [
     "val.town", # Seems not to parse well...
@@ -110,14 +111,14 @@ def get_hn_links():
     return articles[:number_of_articles]
 
 def create_introduction(episode) -> str:
-    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}.\n\n"
+    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow {language}\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}.\n\n"
     prompt += f"This is the content of the episode:\n{episode}\n\n"
     prompt += "\nCreate a short introduction paragraph for the episode to get people excited about today's content. Use an easy-to-follow and conversational style as you would in a podcast.\n\n"
 
     return make_gpt4_call(prompt)
 
 def create_ending(episode) -> str:
-    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow Italian\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. "
+    prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow {language}\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}. "
     prompt += f"Here is the text of the episode:\n{episode}\n\n"
     prompt += "Create a short ending for the episode. Use an easy-to-follow and conversational style as you would in a podcast.\n\n"
 
