@@ -1,0 +1,55 @@
+¡Hola amigos! Bienvenidos a un nuevo episodio de "Hacker News en lento italiano". Hoy, vamos a explorar cinco artículos interesantes que te mantendrán entretenido mientras practicas tu español. Hablaremos de un videojuego de código abierto sobre guerras antiguas, aprenderemos a hacer aviones de papel increíbles, conoceremos una intrigante fuente tipográfica, nos sumergiremos en el fascinante mundo de una cabina de vídeo de tiempo bala y, finalmente, repasaremos los solucionadores SAT en el ámbito de la programación. Así que siéntate, relájate y acompáñanos en este emocionante viaje por las últimas noticias en el mundo de la tecnología y la creatividad. ¡Comencemos!
+
+0 A.D. es un videojuego gratuito y de código abierto sobre guerras antiguas. El juego está en desarrollo desde hace 22 años, y aunque todavía no está terminado, ha logrado un gran seguimiento y reconocimiento en la comunidad.
+
+Este videojuego de estrategia en tiempo real (RTS) está inspirado en la historia antigua y permite a los jugadores liderar diferentes civilizaciones, como los romanos, griegos, cartagineses, persas y muchas más. Cada facción tiene sus propias características, unidades y habilidades, lo que hace que cada partida sea única y emocionante. Todo va desde la creación de edificios hasta el entrenamiento de un poderoso ejército para enfrentarse a tus enemigos en batallas épicas.
+
+El equipo de desarrollo, Wildfire Games, sigue trabajando duro en la mejora y expansión del juego. Recientemente anunciaron que la próxima versión alfa incluirá una función experimental de Vulkan, una nueva API de gráficos que mejorará la calidad y el rendimiento del juego. Los jugadores pueden probar esta función y reportar errores descargando la versión de desarrollo del juego.
+
+Para apoyar el desarrollo de 0 A.D., la comunidad puede participar en foros, reportar errores y hacer donaciones. Esto ayuda a mejorar y promocionar el juego entre nuevos jugadores y fanáticos de los juegos de estrategia. Además, Wildfire Games está buscando constantemente nuevos colaboradores, como artistas, músicos, programadores y diseñadores de niveles, para unirse al equipo y ayudar a dar vida a la historia del juego.
+
+En resumen, 0 A.D. es un emocionante videojuego de código abierto de estrategia en tiempo real basado en la historia antigua, que ha sido un proyecto en desarrollo durante más de dos décadas. Con el apoyo continuo de su comunidad y las mejoras en el rendimiento y la calidad del juego, 0 A.D. sigue siendo un proyecto prometedor que vale la pena seguir.
+
+El artículo "Diseños de aviones de papel" presenta una base de datos de aviones de papel con instrucciones de plegado fáciles de seguir, tutoriales en video y planes de plegado imprimibles. Aquí puedes encontrar los mejores aviones de papel que vuelan más lejos y se mantienen en el aire el mayor tiempo posible. Aprende cómo hacer aviones de papel que impresionarán a tus amigos.
+
+Además de los planes de aviones de papel, el artículo ofrece una colección de consejos y trucos de expertos que te ayudarán a perfeccionar tus aviones de papel y a alcanzar un rendimiento óptimo. También hay una serie de artículos sobre aviones de papel en una variedad de temas que pueden interesar a los entusiastas. Por ejemplo, puedes descubrir algunos récords mundiales de aviones de papel o aprender cómo hacer un lanzador de aviones de papel.
+
+Este recurso es apto tanto para pilotos expertos de aviones de papel como para estudiantes principiantes en aviación. La idea es que disfrutes de esta actividad divertida y la compartas con amigos y familiares.
+
+Por más de 10 años, Fold'NFly ha estado enseñando a personas de todo el mundo cómo hacer aviones de papel. La base de datos incluye instrucciones paso a paso, guías en video y plantillas imprimibles en las que simplemente tienes que doblar en las líneas numeradas para obtener un avión de papel perfecto cada vez.
+
+En resumen, este artículo es un recurso completo para cualquier persona interesada en aprender a hacer aviones de papel y mejorar sus habilidades de plegado. Desde diseños básicos hasta aviones más complicados, hay opciones para todos los niveles de habilidad y gustos. ¡Diviértete explorando los diferentes diseños y compitiendo con tus amigos para ver quién puede hacer el avión de papel que vuele más lejos!
+
+El artículo se titula "Times New Bastard", y trata sobre una nueva fuente creada por un diseñador llamado weiweihuanghuang. Esta fuente es una mezcla de dos tipos de letra: la clásica Times New Roman y la moderna Nimbus Roman No. 9 L y Nimbus Sans.
+
+Times New Bastard es una fuente única porque combina un estilo tradicional con un enfoque moderno; cada séptima letra es sans serif, lo que crea un efecto visual interesante y llamativo. Esta combinación de tipos de letra fue la idea original del diseñador ommanyte en Tumblr.
+
+Para utilizar esta fuente en la web, es necesario activar las ligaduras y optimizar la legibilidad del texto. Si queremos usarla en Microsoft Office, simplemente debemos activar las ligaduras. La fuente se puede descargar gratuitamente y cuenta con licencia GNU Affero General Public License Version 3.
+
+Según el diseñador, la finalidad de crear esta fuente es ofrecer una opción diferente y creativa para proyectos de diseño. Times New Bastard es ideal para aquellos que buscan una opción original y sorprendente, que combine elementos clásicos y modernos en un mismo tipo de letra.
+
+En resumen, "Times New Bastard" es una interesante propuesta de fuente que combina de manera original y llamativa dos estilos diferentes de tipografía. Si te animas a probarla en tus proyectos, no dudes en descargarla y compartirla con tus colegas diseñadores. Aunque pueda parecer extraña a simple vista, Times New Bastard es una opción única y creativa para aquellos que buscan darle un toque de originalidad a su trabajo.
+
+El artículo "There oughta be a bullet time video booth" presenta un proyecto interesante y visual. Se trata de una cabina de vídeo que crea secuencias "al estilo Matrix" mediante el efecto de tiempo bala. El autor explica cómo desarrolló esta idea para la boda de su primo, utilizando varias cámaras DSLR y un software especializado.
+
+El efecto de tiempo bala es un efecto cinematográfico famoso que fue introducido en la película "Matrix" en 1999. Consiste en tomar fotos con una serie de cámaras en diferentes ángulos y luego unirlas para crear la sensación de que el tiempo se congela mientras la cámara se mueve libremente. Para lograr este efecto, el autor utilizó doce cámaras Canon EOS 400D junto con una cámara de vídeo Sony a5000.
+
+Montar y alimentar doce cámaras resultó ser un desafío, especialmente debido al alto costo de los componentes necesarios. Para mantener los gastos en un rango razonable, el autor eligió cámaras de segunda mano y una solución de montaje improvisada que no resultó ser ideal. La envergadura de los costos fue bastante alta teniendo en cuenta que se trataba de un simple truco para una cabina de vídeo. Además de las cámaras, una parte crucial fue la correcta iluminación del escenario.
+
+El software utilizado para controlar las cámaras fue escrito en Python y se basó en la biblioteca gphoto2 para comunicarse con las cámaras a través de USB. Para la creación de videoclips y la reproducción de las secuencias, se utilizó un envoltorio de ffmpeg y una interfaz de navegador basada en Flask. Al mostrar videoclips mientras la cabina no estaba en uso, el sistema parecía tener una presentación de alta calidad, a pesar de las limitaciones de los componentes de hardware.
+
+En conclusión, la cabina de vídeo de tiempo bala es un proyecto visualmente atractivo que puede ser una adición emocionante a eventos como bodas. Aunque el proceso de construcción y configuración presenta ciertos desafíos, el resultado final es un recuerdo cinematográfico y creativo para los participantes.
+
+En el artículo "Modern SAT solvers: fast, neat and underused (2018)", Martin Hořeňovský habla de cómo los solucionadores modernos SAT son rápidos, limpios y subutilizados en la industria. El problema SAT (Boolean satisfiability problem) es decidir si una fórmula en lógica booleana es satisfactoria. Una fórmula es satisfactoria cuando al menos una interpretación (una asignación de valores verdaderos y falsos a variables lógicas) hace que la fórmula se evalúe como verdadera. Si no existe tal interpretación, se considera insatisfactoria.
+
+Lo interesante del problema SAT es que se puede traducir en tiempo razonable a un conjunto de otros problemas y ser resuelto. Por ejemplo, los sistemas de resolución de dependencias son problemas NP-completos y son traducibles a SAT. Pero no es suficiente, es necesario convertirlos en una forma que esté en CNF (conjunctive normal form).
+
+En su artículo, Hořeňovský explica cómo utilizar solucionadores de SAT y cómo convertir fórmulas en CNF utilizando leyes de equivalencia, lo que es más rápido que derivarlas de las tablas de verdad cada vez. Luego, se enfoca en cómo se podría utilizar un problema del mundo real, como el Sudoku, utilizando un solucionador SAT. También aclara que hay que ser muy cuidadoso al momento de traducir problemas en SAT para no confiar en supuestos no enunciados y explica los pasos necesarios para limitar el número de literales verdaderos a "exactamente uno" en las fórmulas CNF.
+
+El artículo ofrece ejemplos de implementación en C++ y discute el rendimiento de estos solucionadores SAT en comparación con solucionadores especializados de alto rendimiento como ZSolver y fsss2. Aunque estos solucionadores especializados son más rápidos, Martin destaca algunas ventajas de los solucionadores de SAT, como la facilidad de escritura y la extensibilidad.
+
+En resumen, este artículo ofrece una visión interesante y detallada sobre cómo los solucionadores SAT pueden ser utilizados eficientemente para resolver problemas del mundo real, como el Sudoku, y cómo implementarlos en un lenguaje de programación como el C++. Aunque no pueden igualar el rendimiento de los solucionadores especializados de alto rendimiento, ofrecen una alternativa rápida y fácil para aquellos que buscan resolver problemas utilizando solucionadores SAT.
+
+Gracias por escuchar este episodio de "Hacker News en lento italiano". Esperamos que hayan disfrutado de los temas que hemos compartido y que hayan aprendido algo nuevo, ya sea sobre videojuegos, aviones de papel, fuentes únicas, técnicas de fotografía o solucionadores de problemas.
+
+No olvides suscribirte a nuestro podcast para recibir más episodios con información interesante y fácil de entender. Si te gusta lo que escuchas, comparte nuestro podcast con tus amigos y ayúdanos a llegar a más personas que estén interesadas en aprender. ¡Nos vemos en el próximo episodio, y hasta entonces, sigue explorando y creciendo en tus habilidades! Hasta la próxima.
