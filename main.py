@@ -16,7 +16,9 @@ max_retries = 5
 max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters, so use 3000 for GPT3 for testing and 7000 for GPT4.
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-language = "Spanish"
+language = "Italian"
+# language = "Spanish"
+language = "Portuguese"
 number_of_articles = 5
 text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episode-transcripts/hn-ep-{language}-transcript-{date_time_string}.txt"
 file_audio = f"hn-ep-{language}-audio" + date_time_string
@@ -24,7 +26,8 @@ file_audio = f"hn-ep-{language}-audio" + date_time_string
 playht_api_key = os.getenv("PLAYHT_API_KEY")
 playht_user_id = os.getenv("PLAYHT_USER_ID")
 playht_voice = 'it-IT-ElsaNeural'
-playht_voice = "es-ES_LauraV3Voice"
+# playht_voice = "es-ES_LauraV3Voice"
+playht_voice = "pt-PT-FernandaNeural"
 
 denylist_urls = [
     "val.town", # Seems not to parse well...

@@ -1,0 +1,59 @@
+Olá amigos e amigas, bem-vindos a mais um episódio do nosso podcast "Hacker News em Slow Portuguese"! Hoje, nós preparamos para vocês um resumo dos cinco artigos mais interessantes no Hacker News que todos poderão entender, mesmo aqueles que estão aprendendo português. Vamos falar sobre as revelações do Snowden e o impacto na segurança na internet, um caso curioso envolvendo inteligência artificial no mundo jurídico, como assistir gratuitamente filmes clássicos na internet, WebXR para criar experiências imersivas e, por fim, como manter relacionamentos saudáveis evitando o "tecido cicatricial". Então vamos lá, pegue seu café ou chá e venha mergulhar conosco nesses fascinantes tópicos!
+
+O artigo "Reflections on Ten Years Past The Snowden Revelations" traz uma série de reflexões sobre os acontecimentos relacionados às revelações feitas por Edward Snowden há dez anos, sobre as atividades de espionagem da Agência de Segurança Nacional (NSA) dos Estados Unidos. O texto é resultado da união das perspectivas de quatro especialistas: alguém que esteve envolvido em examinar informações para informar o público, um diretor de segurança da IETF, um especialista em direitos humanos e um especialista em ciência da computação e direito. O objetivo é fornecer uma perspectiva histórica, ao mesmo tempo em que oferece uma visão dos desafios de segurança e privacidade que a comunidade técnica deve considerar.
+
+A reação da IETF (Força-Tarefa de Engenharia da Internet) e de outras comunidades técnicas da área da segurança e privacidade após as revelações do Snowden foi de surpresa, principalmente devido ao alcance e à pervasividade das atividades expostas. Esforços foram feitos dentro da IETF para desenvolver melhores práticas para o uso do Transport Layer Security (TLS) e criar novas versões do mesmo, a fim de melhorar a segurança e a privacidade na internet. Além disso, iniciativas para criptografar o tráfego de DNS começaram como resultado das revelações.
+
+O artigo também discute questões relevantes sobre o conteúdo e as consequências das revelações feitas por Snowden. O autor Bruce Schneier compartilha suas emoções ao passar por centenas de documentos classificados como ultrassecretos da NSA. A partir das informações expostas, torna-se evidente que o âmbito desses programas é enorme e envolve diversos programas, métodos e instrumentos. O autor também aborda o impacto causado pela descoberta dessas informações e como lidar com segredos expostos à sociedade.
+
+Os autores do artigo reiteram a importância de refletir sobre o impacto que tais revelações tiveram e ainda têm na segurança e na privacidade dos usuários da internet. Ainda há muito trabalho a ser feito para garantir a proteção das informações e o equilíbrio entre privacidade e a capacidade de prevenir atividades criminosas e terroristas no ciberespaço.
+
+Em resumo, o artigo "Reflections on Ten Years Past the Snowden Revelations" mostra um profundo inventário das consequências e mudanças geradas pela descoberta das atividades de espionagem e vigilância em massa realizadas pela NSA. Os autores convidam os leitores a refletirem consigo mesmos sobre o impacto global dessas atividades e as possíveis soluções para lidar com essa realidade de vigilância e privacidade na era digital.
+
+Em um artigo intitulado "Advogado cita casos falsos inventados por ChatGPT, juiz não se diverte", é relatado um caso interessante no mundo jurídico. Um advogado utilizou o ChatGPT para encontrar exemplos de casos que apoiassem um argumento que ele estava tentando fazer. O ChatGPT criou casos fictícios e o advogado apresentou esses casos ao tribunal.
+
+Quando o juiz solicitou cópias dos casos citados, o advogado recorreu novamente ao ChatGPT para obter ajuda, e a ferramenta criou detalhes completos desses casos fictícios. O advogado apresentou esses detalhes em seus documentos legais, causando a ira do juiz.
+
+O caso em questão, Mata v. Avianca, Inc. (1:22-cv-01461), teve um desenrolar complicado ao longo de um ano e atingiu seu ponto crítico em março de 2023, quando o advogado apresentou um documento citando casos fictícios. A situação piorou quando, em abril de 2023, o juiz ordenou que o advogado apresentasse cópias dos casos citados e o advogado recorreu novamente ao ChatGPT.
+
+Após a apresentação dos casos falsos, o juiz ficou furioso e ameaçou punir todas as partes envolvidas. Um advogado usou essa ferramenta sem entender totalmente como ela funciona, criando um cenário alarmante no mundo jurídico.
+
+O incidente serve como um alerta para aqueles que usam ferramentas como o ChatGPT sem entender completamente seu funcionamento. As consequências dessa história podem servir como lição para outros profissionais tomarem cuidado ao utilizar inteligência artificial em suas atividades. Mais detalhes sobre o caso devem vir à tona após uma audiência marcada para 8 de junho.
+
+Assistir aos melhores filmes de Tarkovsky online e de graça
+
+Você já ouviu falar de Andrei Tarkovsky? Ele foi um grande cineasta russo e, agora, você pode assistir seus filmes online de graça! A Mosfilm, uma das maiores produtoras de filmes da URSS durante a era soviética, disponibilizou versões completas de muitos de seus filmes mais aclamados e influentes no YouTube. Isso inclui seis filmes de Tarkovsky: Stalker, Solaris, A Infância de Ivan, O Espelho, Andrei Rublev e A Paixão Segundo Andrei.
+
+Além desses filmes de Tarkovsky, a Mosfilm também disponibilizou outros clássicos, como o Encouraçado Potemkin, de Sergei Eisenstein. Diversos desses filmes aparecem na lista da Sight and Sound dos 100 melhores filmes de todos os tempos, que foi publicada em 2022.
+
+Se você gosta de cinema, essa é uma excelente oportunidade de conhecer obras importantes da história do cinema mundial. Tarkovsky, por exemplo, é um diretor que influenciou muitos outros cineastas ao redor do mundo. Seus filmes têm um estilo bem particular e poético, além de trazerem reflexões profundas sobre a natureza humana.
+
+Para assistir aos filmes, basta acessar o YouTube e procurar pelo canal da Mosfilm. Lá, você encontrará não só os filmes mencionados acima, mas também outras grandes produções da era soviética. E o melhor de tudo, de graça!
+
+Portanto, se você está estudando português e ama cinema, que tal aproveitar essa chance para assistir a alguns dos melhores filmes da história e, ainda, treinar seu idioma? Boa sessão!
+
+O artigo "WebXR" apresenta uma introdução ao desenvolvimento de aplicativos e experiências de Realidade Virtual (VR) e Realidade Aumentada (AR) na web. A API WebXR Device fornece acesso a informações de entrada e saída de dispositivos VR e AR. Com a WebXR, você pode criar e hospedar experiências de VR e AR diretamente em seu site.
+
+Os dispositivos móveis podem habilitar a VR fornecendo informações de posicionamento e permitindo a renderização da cena WebGL lado a lado em um headset, como o Google Cardboard. já a AR é habilitada através do uso de recursos de AR da plataforma, como ARCore, para renderizar a cena WebGL no ambiente do usuário. Os computadores desktop podem usar hardware de VR como Oculus Rift ou HTC Vive para exibir a cena em VR.
+
+Para buscar os benefícios da WebXR, é preciso desenvolver aplicações e experiências que possam ser implantadas instantaneamente em todas as plataformas XR e que sejam compatíveis com novos dispositivos VR e AR. Além disso, o usuário não precisa baixar um aplicativo ou visitar uma loja de aplicativos, pois pode acessar a experiência diretamente no seu site.
+
+O artigo também apresenta uma série de bibliotecas e frameworks que já possuem suporte integrado à WebXR, como A-Frame, Babylon.js, model-viewer, p5.xr, PlayCanvas, React-XR, Three.js, Unity e Verge3D. Além disso, são oferecidas dicas para garantir a compatibilidade da aplicação, como a necessidade de servir seu conteúdo através de HTTPS/SSL, ou a partir do URL localhost para experiências de VR e AR na web.
+
+Em suma, a WebXR permite desenvolver experiências interativas de VR e AR na web sem a necessidade de downloads grandes ou instalação de aplicativos. Com o apoio de uma gama crescente de bibliotecas e frameworks e uma comunidade de desenvolvedores ativa, a WebXR oferece um futuro promissor para a criação e distribuição de experiências imersivas.
+
+"O tecido cicatricial desgasta relacionamentos" é um artigo de 2013 baseado em uma palestra do Professor John Ousterhout na Universidade de Stanford. O autor discute como as pequenas coisas podem prejudicar ou destruir amizades e relacionamentos profissionais. As relações não falham por causa de um único evento catastrófico, mas sim pelo acúmulo de pequenos problemas e mal-entendidos.
+
+Prof. Ousterhout chama esse acúmulo de problemas de "tecido cicatricial". O tecido cicatricial é formado quando uma ferida não cicatriza apropriadamente e é mais fraco que o tecido original. Da mesma forma, os problemas acumulados em um relacionamento o desgastam e enfraquecem com o tempo. Em algum momento, a relação pode chegar a um ponto crítico e ceder.
+
+Se você deseja preservar um relacionamento saudável por longo prazo, é necessário evitar a formação de tecido cicatricial. Isso significa resolver problemas e mal-entendidos de forma a não deixar ninguém ressentido ou magoado. É importante ouvir e compreender o ponto de vista da outra pessoa e encontrar um acordo em que ambos estejam satisfeitos. Ambas as partes devem estar dispostas a ceder e a cooperar.
+
+Algumas pessoas tendem a ser muito agradáveis e a evitar confrontos, cedendo no que não deveriam. Isso pode parecer generoso, mas na verdade pode ser prejudicial a longo prazo, pois o ressentimento pode se acumular e levar ao desgaste do relacionamento. Por outro lado, aqueles que insistem em ter razão e impor seus pontos de vista também danificam as relações.
+
+Em conclusão, o artigo defende que evitar a criação de tecido cicatricial é a chave para manter relacionamentos duradouros e saudáveis. O importante é enfrentar e resolver problemas, por menores que sejam, de forma a evitar o acúmulo de ressentimentos e desgaste. Isso exige comunicação, empatia e disposição para cooperar e ceder.
+
+E é isso, pessoal! Essas foram as top 5 notícias que escolhemos para vocês no episódio de hoje do podcast "Hacker News em Slow Portuguese". Esperamos que tenham gostado e que essas informações tenham sido úteis para aprimorar seu português. Lembre-se de que ouvir em ritmo mais lento pode ajudar você a entender melhor e absorver o idioma.
+
+Caso tenham sugestões, comentários ou perguntas, por favor, deixem nos comentários ou entrem em contato conosco. Estamos sempre abertos a melhorar e trazer temas interessantes para os aprendizes de português como você.
+
+Então, até o próximo episódio e não esqueçam de compartilhar o podcast com seus amigos que também estão aprendendo português. Muito obrigado pela sua audiência e continuem praticando! Até mais!
