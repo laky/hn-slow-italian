@@ -1,0 +1,59 @@
+Benvenuti a un nuovo episodio di "Hacker News in Slow Italian"! Oggi abbiamo degli argomenti davvero interessanti da condividere con voi. Parleremo di uno strumento per proteggere il vostro iPhone, un programma che resiste alle modifiche del codice, la situazione dell'acqua in Arizona, e come trasformare i Jupyter Notebook in Web Apps! Infine, impareremo anche di un insieme di macro che proteggono dai buffer overflow. Preparatevi, mettetevi comodi e godetevi l'episodio!
+
+Questo articolo presenta uno strumento chiamato "Triangle Check" che permette di esaminare i backup di iPhone alla ricerca di tracce di compromissioni legate all'operazione "Triangulation". L'operazione Triangulation è un'attività di ricerca che mira a individuare e analizzare possibili minacce informatiche legate ai dispositivi mobili.
+
+Il programma "Triangle Check" può essere scaricato e installato sul proprio computer. È compatibile con Windows e Linux ed offre una semplice interfaccia per l'utente finale. Per utilizzare l'applicazione, è necessario avere un backup del proprio iPhone creato con iTunes. Se il backup è protetto da password, sarà necessario inserire la password corretta per poter analizzare il contenuto del backup. 
+
+Una volta avviato, "Triangle Check" analizzerà i file presenti nel backup e controllerà la presenza di indicatori di compromissione associati all'operazione Triangulation. In caso di sospetti, verranno visualizzate alcune righe di testo con la dicitura "SUSPICION" o "DETECTED", seguite da ulteriori informazioni e dettagli sull'indicatore di compromissione individuato. Questo significa che il dispositivo è stato molto probabilmente compromesso.
+
+Le ricerche sull'operazione Triangulation sono ancora in corso e vengono costantemente aggiornate per identificare nuovi possibili indicatori di compromissione. Per ulteriori informazioni e aggiornamenti, si consiglia di visitare il sito web Securelist.
+
+In conclusione, "Triangle Check" è uno strumento utile per proteggere i propri dispositivi iPhone da possibili minacce informatiche. Offre un modo semplice e veloce per identificare eventuali tracce di compromissioni associate all'operazione Triangulation e consente agli utenti di essere sempre informati sulle ultime minacce e vulnerabilità identificate.
+
+Il programma "Radiation-hardened Quine" del 2014 è un programma di stampa di se stesso scritto in Ruby. La caratteristica sorprendente di questo programma è che funziona anche se si elimina un carattere da qualsiasi punto del codice. In questo articolo, viene spiegato come utilizzare e testare questo programma.
+
+L'utilizzo normale del programma "Radiation-hardened Quine" prevede di eseguirlo e verificare se l'output è uguale al codice originale. Per farlo, è possibile utilizzare il comando "ruby rquine.rb > rquine2.rb" seguito da "diff rquine.rb rquine2.rb" per confrontare i due file e verificare le differenze tra di essi. 
+
+L'utilizzo anormale del programma prevede di eliminare un carattere in modo casuale dal codice originale e verificare se il programma "rotto" funziona ancora. Per fare questo, è possibile creare uno script per eliminare un carattere a caso e confrontare nuovamente i file come descritto in precedenza. 
+
+L'articolo descrive anche la storia dello sviluppo di "Radiation-hardened Quine", comprendente diverse versioni del programma. La prima versione si basava su un approccio di ridondanza, avendo due copie del codice principale. La seconda versione, creata da Darren Smith alias flagitious, riparava se stessa invece di basarsi sulla ridondanza. La versione attuale presenta un'arte ASCII ed è basata sull'approccio di flagitious, funzionante con Ruby 1.9 o successivo. 
+
+In conclusione, "Radiation-hardened Quine" è un programma interessante e robusto che dimostra come un programma possa essere reso resistente alle modifiche del codice. Se sei interessato a testare questo programma e vedere come funziona, ti consiglio di leggere l'articolo e seguire le istruzioni fornite.
+
+Titolo dell'articolo: "L'Arizona limita le costruzioni poiché le acque sotterranee si prosciugano".
+
+L'articolo parla della situazione in Arizona, dove le acque sotterranee si stanno prosciugando. Per questo motivo, le autorità hanno deciso di limitare le costruzioni. Questa misura è stata presa per proteggere la risorsa idrica della regione.
+
+La scarsità d'acqua è un problema serio in Arizona. La regione è molto arida e le riserve d'acqua si stanno esaurendo. Questo porta a difficoltà per agricoltori e cittadini che vivono nell'area. Per risolvere il problema, il governo ha deciso di limitare le costruzioni e promuovere il risparmio idrico.
+
+L'articolo spiega che questa decisione è stata presa anche per ragioni di sicurezza. Le persone che visitano il sito protetto non hanno il permesso di accedere alla pagina richiesta. Questa pagina non può essere visualizzata per motivi di sicurezza.
+
+In conclusione, l'Arizona cerca di affrontare il problema della scarsità d'acqua attraverso misure come la limitazione delle costruzioni. È importante che tutti siano consapevoli di questo problema e facciano la loro parte per contribuire al risparmio idrico. Ricordatevi di usare l'acqua con parsimonia e seguire le regole stabilite dalle autorità locali.
+
+Titolo dell'articolo: "Show HN: Mercury - converti i Jupyter Notebooks in Web Apps senza riscrivere il codice"
+
+Mercury è un framework open-source per Python Notebook che permette di trasformare i Jupyter Notebook in App Web senza dover riscrivere il codice. Con Mercury, è possibile condividere i risultati con utenti non tecnici in modo semplice e veloce. Non è necessario conoscere lo sviluppo frontend, HTML, CSS o JavaScript, poiché tutto avviene in Python puro senza uscire da Jupyter Notebook.
+
+Il framework Mercury è il più semplice da usare, senza bisogno di scrivere callback per aggiornare i widget. I widget si trovano nella barra laterale e gli output vengono visualizzati nello stesso ordine in cui compaiono nel notebook. Con Mercury, il layout del tuo notebook risulta pulito e perfetto, rendendo le collaborazioni molto più efficienti.
+
+Con Mercury, è possibile creare applicazioni Web con widget interattivi, costruire report con programmazione automatica e esportazione in PDF, condividere i risultati attraverso dashboard interattive e trasformare i notebook in splendidi siti web statici e presentazioni interattive. Tutto questo avviene in pochi passaggi: si parte dal Python Notebook, si aggiunge l'interattività con i widget e si avvia il server Mercury per servire il notebook come Web App.
+
+Mercury offre molte funzionalità interessanti, come nascondere o mostrare il codice nell'app, esportare il notebook eseguito in PDF o HTML, stabilire con chi condividere i notebook e incorporare i notebook eseguiti con Mercury su qualsiasi sito web. Inoltre, è possibile produrre file nel notebook e renderli scaricabili.
+
+Il framework Mercury è disponibile con licenza AGPL v3, quindi è open source. Esiste anche una versione commerciale con più funzionalità, supporto dedicato e fork privati, chiamata Mercury Pro. In conclusione, Mercury rappresenta un'ottima soluzione per trasformare i Jupyter Notebook in Web Apps senza dover riscrivere il codice, rendendo accessibili e condivisibili i risultati anche con utenti non tecnici.
+
+L'articolo presenta "Neverflow", un insieme di macro C che proteggono dai buffer overflow. Il buffer overflow è un problema di sicurezza che può causare malfunzionamenti e attacchi informatici. Le macro di Neverflow si basano sulla funzionalità VLA (Variable Length Array) presente nel linguaggio di programmazione C dallo standard C99.
+
+L'autore dell'articolo spiega come le VLA siano state spesso criticate per essere pericolose e insicure. Questa caratteristica è stata resa opzionale nella versione C11 del linguaggio. Tuttavia, l'autore sottolinea che l'aspetto più importante delle VLA non è soltanto la possibilità di dichiarare array a lunghezza variabile sulla pila, ma la dichiarazione di tipi modificabili in modo variabile.
+
+Neverflow propone due macro principali: "NEW" per dichiarare un array e "AT" per controllare a runtime se l'indice è compreso nei limiti e restituire l'indirizzo dell'elemento successivo. L'articolo mostra esempi di codice che dimostrano l'utilizzo di queste macro in diversi contesti, come ad esempio la modifica diretta degli elementi dell'array e il controllo dei limiti per prevenire buffer overflow.
+
+In aggiunta alle macro principali, l'articolo presenta anche altre macro e funzionalità utili. Ad esempio, la macro "GET" viene introdotta per semplificare la distinzione tra ottenere l'indirizzo di un elemento dell'array o l'elemento stesso. Ci sono inoltre altre funzionalità quali "LET" per facilitare l'inferenza del tipo di dato, "SIZE" per ottenere la dimensione dell'array e "LEN" per avere il numero di elementi presenti nell'array.
+
+Infine, l'autore presenta la macro "ARR" che permette di passare gli array alle funzioni mantenendo le caratteristiche di Neverflow. Questa macro ha anche il vantaggio di poter "avvolgere" puntatori e array grezzi, garantendo così controlli sulle dimensioni a runtime anche in quei casi.
+
+In conclusione, Neverflow rappresenta un'interessante soluzione per proteggere il codice C dai pericoli dei buffer overflow, sfruttando al meglio le funzionalità delle Variable Length Array.
+
+Ecco tutto per l'episodio di oggi di "Hacker News in Slow Italian"! Speriamo che tu abbia trovato interessanti e utili questi articoli e che ti aiutino a migliorare il tuo italiano. Continua a seguirci per rimanere aggiornato sulle ultime notizie dal mondo della tecnologia e della programmazione.
+
+Se hai domande o commenti sulle notizie di oggi, non esitare a farlo sapere con un commento, e saremo felici di discuterne con te. Ti ringraziamo per aver scelto il nostro podcast e ci sentiamo presto nel prossimo episodio. Ciao e buon ascolto!
