@@ -18,7 +18,8 @@ max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters,
 openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
 # language = "Spanish"
-language = "Portuguese"
+# language = "Portuguese"
+language = "Slovak"
 number_of_articles = 5
 text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episode-transcripts/hn-ep-{language}-transcript-{date_time_string}.txt"
 file_audio = f"hn-ep-{language}-audio" + date_time_string
@@ -27,11 +28,14 @@ playht_api_key = os.getenv("PLAYHT_API_KEY")
 playht_user_id = os.getenv("PLAYHT_USER_ID")
 playht_voice = 'it-IT-ElsaNeural'
 # playht_voice = "es-ES_LauraV3Voice"
-playht_voice = "pt-PT-FernandaNeural"
+# playht_voice = "pt-PT-FernandaNeural"
+playht_voice = "sk-SK-LukasNeural"
 
 denylist_urls = [
     "val.town", # Seems not to parse well...
     "lightning.ai/pages/blog", # Forbidden :( TODO: handle these errors better
+    "bloomberg.com", # Robot check :( TODO: handle these errors better
+    "whatsapp.com", # Robot check :( TODO: handle these errors better
 ]
 
 

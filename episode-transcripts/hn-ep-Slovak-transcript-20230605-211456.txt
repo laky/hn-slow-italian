@@ -1,0 +1,55 @@
+Vitajte v dnešnej epizóde podcastu "Hacker News in Slow Slovak"! Dnes vám prinášame zaujímavosti zo sveta technológií a inovácií, a to v jednoduchom a pomalom slovenčine. Povieme si o prvom priestorovom počítači spoločnosti Apple - Apple Vision Pro, o možnom ohrození práva napádať zlé patenty, o novom Mac Studio a najnovšiom iOS 17. To všetko a ešte viac čaká práve na vás! Pripojte sa k nám, zábava a vedomosti sú zaručené.
+
+Predstavujeme Apple Vision Pro: prvý priestorový počítač spoločnosti Apple. Spoločnosť Apple predstavila Apple Vision Pro, revolučný priestorový počítač, ktorý spája digitálny obsah s fyzickým svetom. Umožňuje používateľom zostať prítomnými a pripojenými k ostatným. Vision Pro ponúka nekonečnú plochu pre aplikácie, ktoré prekračujú hranice tradičného displeja a zavádzajú úplne trojrozmerné používateľské rozhranie. Vision Pro je ovládaný pomocou očí, rúk a hlasu používateľa. S operačným systémom visionOS, ktorý je prvým priestorovým operačným systémom na svete, môžu používatelia interagovať s digitálnym obsahom tak, akoby sa nachádzal fyzicky v ich priestore.
+
+Podľa Tima Cooka, generálneho riaditeľa spoločnosti Apple, značí dnešný deň začiatok novej éry výpočetnej techniky. Apple Vision Pro zmení spôsob, akým používatelia pracujú s obľúbenými aplikáciami, vytvárať a prežívať spomienky, sledovať televízne seriály, filmy a komunikovať s ostatnými cez FaceTime. Vision Pro ponúka nekonečné priestory pre aplikácie na prácu i doma, ktoré uľahčujú súčasné spustenie viacerých aplikácií a hardvérovej podpory pre Magic Keyboard a Magic Trackpad.
+
+Okrem zmeny spôsobu, akým používatelia interagujú so svojimi obľúbenými aplikáciami, Vision Pro ponúka aj spôsob ako efektívne pracovať s veľkou sadou aplikácií. To zahrňuje sledovanie filmov, prehrávanie hier a podporu pre populárne herné ovládače. Užívatelia tiež budú mať prístup k svojim obľúbeným obrázkom a videám na iCloud a môžu si ich prezrieť vo veľkosti reálneho života.
+
+Operačný systém VisionOS má úplne nové trojrozmerné rozhranie, ktoré uľahčuje navigáciu a interakciu s priestorovým obsahom. Apple Vision Pro prináša úplne nový vstupný systém ovládaný očami, rukami a hlasom používateľa. Výkonný sledovací systém očí v Apple Vision Pro umožňuje intuitívne ovládanie.
+
+Cena Apple Vision Pro začína na 3 499 amerických dolárov a bude k dispozícii začiatkom budúceho roka na webovej stránke apple.com a v Apple Store v USA, pričom v ďalších krajinách bude k dispozícii neskôr v priebehu roka. Jednotliví zákazníci si budú môcť v predajniach Apple Store bližšie prezrieť, vyskúšať a prispôsobiť Vision Pro. Viac informácií o Vision Pro nájdete na stránke apple.com/apple-vision-pro.
+
+
+Článok sa nazýva "Naše právo napadnúť zlé patenty je ohrozené". Americký patentový úrad navrhol nové pravidlá týkajúce sa toho, kto môže napádať nesprávne udelené patenty. Ak sa tieto pravidlá stanú oficiálnymi, poskytnú nové ochrany patentovým trolom. Napádanie patentov sa tak stane oveľa náročnejším, pre niektorých dokonca nemožným. Nové pravidlá môžu zastaviť organizácie, ako je EFF (Electronic Frontier Foundation), ktorá využila tento proces na boj proti patentu osobnej audio nahrávky, od podávania námietok voči patentom.
+
+IPR (Inter Partes Review) je najlepší proces na obmedzenie zlých patentov. Patenty mnohých organizácií sú napadnuté, pretože nie sú spokojné s ich výsledkami alebo si myslia, že sú nesprávne. Medzi nimi sú aj patentoví trolia, ktorí väčšinou patenty len "ošútia" a zarábajú na nich, aj keď samotné patenty obmedzujú zvyšok výskumu a technologického pokroku. Dosiahnutie spravodlivého patentu je najhlavnejší cieľ.
+
+EFF potrebuje podporu svojich stúpencov, aby hovorili proti tomuto návrhu, ktorý je darom pre patentových trolí. Prikladáme jeden vzorkový komentár, ktorý môžete skopírovať a prilepiť do formulára najlepší čistič na vyjadrenie svojho nesúhlasu s pravidlami: "Som proti navrhovaným zmenám pravidiel USPTO pre IPR a ostatné výzvy patentov -Predkladám, že navrhované pravidlá stiahne a proces IPR zostane otvorený pre všetkých USPTO-USPTO, by mal stavov patentove zákony stanovené-, a zvážiť tak-správnymi patentovými námietkami ako IPR dokumenty.
+
+Niektoré z problémových patentov už boli zrušené a tým pomohli všetkým tým, ktorých sa to týka. Ale IPR proces ešte neodstránil patentové podvádžanie. Je tu veľa svojvoľného rozhodovania o tom, čo sa považuje za "patenty", a niektorí povolaní právni pracovníci sa to snažia zneužiť na základe priemyslu, ktorý už nie je schopný riešiť tieto problémy. Tell USPTO To Work For the Public, Not Patent Trolls
+
+Apple predstavuje nový Mac Studio a prináša Apple Silicon pre Mac Pro. Apple oznámil dva najvýkonnejšie Macs, aké kedy vytvoril: nový Mac Studio a Mac Pro. Mac Studio Ponúka nový čip M2 Ultra, vďaka čomu je o 6-krát rýchlejší ako najvýkonnejší Intel-based 27-palcový iMac a o 3x rýchlejší ako predchádzajúci Mac Studio s M1 Ultra. Mac Pro teraz má tiež čip M2 Ultra a ponúka výkonnosť spolu s rozšíriteľnosťou PCIe. 
+
+Nové Mac Studio je navrhnuté pre profesionálov a ponúka vysoký výkon a širokú konektivitu. S čipmi M2 Max a M2 Ultra je výrazne rýchlejší ako predchádzajúca generácia. V porovnaní s predchádzajúcimi modelmi má Mac Studio s M2 Max až o 50 percent rýchlejší výkon a je až štyrikrát rýchlejší ako najvýkonnejší Intel-based 27-palcový iMac. 
+
+Okrem vysokého výkonu prináša Mac Studio aj vylepšenú konektivitu. Ponúka podporu pre až šesť Pro Display XDRs, čo umožňuje veľké množstvo obrazovky pre profesionálne pracovné postupy. Nové Mac Studio je tiež vybavené pokročilými bezdrôtovými technológiami, ako je Wi-Fi 6E a Bluetooth 5.3, s rýchlejším Ethernetovým portom a dvoma USB-C portami a čítačkou SD kariet pre jednoduchý import fotografií a videa. 
+
+Nový Mac Pro prináša výkonnosť čipu M2 Ultra a zároveň rozšíriteľnosť PCIe pre profesionálov, ktorí potrebujú vnútornú rozšíriteľnosť pre svoje pracovné postupy. Mac Pro ponúka až o 3x rýchlejší výkon ako predchádzajúci Intel-based model a je vybavený 24-jadrovým CPU, až 76-jadrovým GPU a až 192 GB pamäte s 800 GB/s šírkou pásma pre unifikovanú pamäť. 
+
+Mac Studio a Mac Pro sú k dispozícii na objednanie už dnes a dostupnosť začína v utorok 13. júna. Mac Studio začína na cene 1 999 dolárov a Mac Pro na cene 6 999 dolárov pre verziu Tower Enclosure a 7 499 dolárov pre verziu Rack Enclosure.
+
+
+Článok s názvom "iOS 17 robí iPhone osobnejším a intuitívnejším" hovorí o novej verzii operačného systému Apple pre iPhony. Táto aktualizácia zlepšuje komunikáciu cez telefón, FaceTime a správy, zjednodušuje zdieľanie pomocou AirDrop a ponúka inteligentnejšie vstupy pre rýchlejšie a presnejšie písanie.
+
+Medzi najväčšie zmeny patrí vylepšený telefónny zážitok, s prispôsobiteľnými kontaktnými plagátmi, ktoré umožnňujú používateľom štýlovo vyjadriť sa pri prichádzajúcich hovoroch. Nová verzia FaceTime ponúka podporu pre audio a video správy, reakcie v podobe sŕdc, balónov či ohňostrojov a možnosť uskutočniť videohovor cez televízor Apple TV 4K.
+
+Aktualizovaná aplikácia Správy prináša nový zážitok so samolepkami, schopnosť vytvoriť živé samolepky a ďalšie vylepšenia, ktoré zlepšujú komunikáciu. Napríklad nový indikátor doháňania ukazuje, kde ste naposledy komunikovali, a písanie správ je rýchlejšie vďaka inteligentnejšímu návrhu. 
+
+iOS 17 zjednodušuje zdieľanie pomocou funkcie AirDrop a NameDrop, ktorá umožňuje rýchlo zdieľať kontaktné informácie alebo obsah jednoducho tak, že priložíte zariadenia k sebe. Ďalšie vylepšenia sa týkajú autocorrect a dikcie, ktoré sú teraz inteligentnejšie a presnejšie.
+
+Nový systém prináša aj aplikáciu Journal, ktorá pomáha používateľom rozmýšľať a rozvíjať vďačnosť prostredníctvom denníkov. Táto aplikácia je navrhnutá tak, aby chránila súkromie používateľa a zabezpečila, že nikto, vrátane spoločnosti Apple, nemá prístup k ich záznamom. Vývojári budú môcť pridávať vlastné návrhy na zápisy do aplikácie.
+
+iOS 17 je k dispozícii pre členov Apple Developer Program, verejná beta verzia bude dostupná budúci mesiac. Nové funkcie budú tento rok na jeseň k dispozícii ako bezplatná aktualizácia softvéru pre iPhone Xs a novšie modely.
+
+Článok s názvom "Apple Vision Pro" sa zaoberá najnovším produktom spoločnosti Apple. Apple Vision Pro je zariadenie, ktoré ponúka inovatívny spôsob počítačového zobrazovania a interakcie s digitálnym obsahom vo vašom okolí. Tento nový spôsob práce s technológiou mení spôsob, akým vnímame a používame digitálne zariadenia.
+
+Apple Vision Pro dokonale kombinuje digitálny obsah s fyzickým priestorom a umožňuje jednoducho ovládať zážitok pomocou očí, rúk a hlasu. To umožňuje používateľom vykonávať veci, ktoré majú radi, v doteraz nedostupných spôsoboch. Navyše Apple Vision Pro prichádza s plne novým operačným systémom - visionOS, ktorý poskytuje výnimočne intuitívne rozhranie pre prácu s aplikáciami, zábavou a komunikáciou s ostatnými.
+
+Apple Vision Pro prirodzene integruje do vašej práce s aplikáciami a rozširuje obmedzenia obrazovky, aby si mohli používatelia prispôsobiť aplikácie potrebám a veľkosti, ktorú si zvolia. Okrem toho ponúka Apple Vision Pro možnosti premeny okolitého prostredia na zaujímavé krajiny a prostredia, ktoré zvyšujú úroveň ponorenia a zamerania sa na danú úlohu.
+
+S Apple Vision Pro je možné premeniť akýkoľvek priestor na osobné divadlo či hernú zónu. Vďaka vysokým rozlíšením zobrazenia a pokročilej technológii priestorového zvuku môžete sledovať filmy, počúvať hudbu alebo hrať hry ako nikdy predtým. Apple Vision Pro vás navyše približuje k vašim spomienkam tým, že umožňuje prehliadať a zdieľať 3D fotografie a videá s vnútorným prostorovým zvukom.
+
+Apple Vision Pro kladie dôraz na súkromie a zabezpečenie, či už prostredníctvom nezdieľania dát z kamier a senzorov s externými aplikáciami alebo prostredníctvom vlastného systému pre overovanie totožnosti - Optic ID, ktorý využíva jedinečné vlastnosti dúhovky. Súhrnne ponúka Apple Vision Pro inovatívny spôsob, ako vnímať a interagovať s digitálnym svetom, a zároveň rešpektuje naše súkromie a potrebu kontroly nad vlastnými údajmi.
+
+A to je všetko pre dnešný diel našich noviniek "Hacker News in Slow Slovak". Ďakujeme, že ste si nás vypočuli. Dúfame, že ste si zlepšili svoju slovenčinu a zároveň sa dozvedeli o zaujímavých novinkách z technologického sveta. Nezabudnite nás sledovať aj naďalej a tešíme sa na vás v našom ďalšom epizóde. Majte sa pekne!
