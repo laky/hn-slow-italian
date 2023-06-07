@@ -19,7 +19,8 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
 # language = "Spanish"
 # language = "Portuguese"
-language = "Slovak"
+# language = "Slovak"
+# language = "German"
 number_of_articles = 5
 text_file = f"/Users/lukasplatinsky/workspace/hn-slow-italian/episode-transcripts/hn-ep-{language}-transcript-{date_time_string}.txt"
 file_audio = f"hn-ep-{language}-audio" + date_time_string
@@ -29,13 +30,17 @@ playht_user_id = os.getenv("PLAYHT_USER_ID")
 playht_voice = 'it-IT-ElsaNeural'
 # playht_voice = "es-ES_LauraV3Voice"
 # playht_voice = "pt-PT-FernandaNeural"
-playht_voice = "sk-SK-LukasNeural"
+# playht_voice = "sk-SK-LukasNeural"
+# playht_voice = "VickiNeural"
 
 denylist_urls = [
     "val.town", # Seems not to parse well...
     "lightning.ai/pages/blog", # Forbidden :( TODO: handle these errors better
     "bloomberg.com", # Robot check :( TODO: handle these errors better
     "whatsapp.com", # Robot check :( TODO: handle these errors better
+    "twitter.com", # js check :( TODO: handle these errors better
+    "reddit.com", # bot check :( TODO: handle these errors better
+    "aboutintel.eu", # fails with too many requests :( TODO: handle these errors better
 ]
 
 

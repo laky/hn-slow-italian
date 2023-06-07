@@ -1,0 +1,50 @@
+Willkommen zu einer neuen Episode von "Hacker News in Slow German"! In dieser Episode haben wir die Top 5 Artikel auf Hacker News für euch zusammengestellt und in einfachem Deutsch erklärt. Wir werden über spannende Entwicklungen bei künstlicher Intelligenz sprechen, untersuchen, wie eine Kamera-App plötzlich Werbung zeigt, und enthüllen, wie Apple seine Beta-Versionen für Entwickler zugänglicher gemacht hat. Setzt eure Kopfhörer auf, lehnt euch zurück und genießt die heutige Episode - perfekt für Deutschlerner und Technikbegeisterte!
+
+Der Artikel "Deepmind Alphadev: Schnellere Sortieralgorithmen entdeckt mit Hilfe von Deep RL" beschreibt eine neue künstliche Intelligenz, die schneller sortierende Algorithmen discovered ist. Die neue KI heißt AlphaDev und wurde mit Deep Reinforcement Learning entwickelt. Der Artikel erklärt, wie die KI schneller sortierende Programme entdeckt hat und wie diese in bestehende Bibliotheken integriert wurden.
+
+Die Algorithmen wurden mithilfe einer KI namens AlphaDev entwickelt, die auf Deep Reinforcement Learning basiert. Das Ziel war es, Algorithmen zu finden, die schneller arbeiten als bisherige menschliche Benchmarks. AlphaDev hat dies geschafft und verbesserte Algorithmen für das Sortieren von Daten entwickelt. Diese Algorithmen wurden in die LLVM Standard C++ Sortierbibliothek integriert.
+
+AlphaDev hat mehrere Algorithmen gefunden, die schneller sortieren als bisherige menschliche Benchmarks. Dies liegt daran, dass die KI in der Lage war, den Raum der Algorithmen effizienter zu erkunden als herkömmliche Suchansätze. AlphaDev ist nicht nur in der Lage, schneller zu sortieren, sondern auch besser auf andere Bereiche wie Wettbewerbsprogrammierung und Netzwerkoptimierung zu reagieren.
+
+Ein interessanter Aspekt der Arbeit von AlphaDev ist, dass die KI neuartige algorithmische Entdeckungen gemacht hat. Sie hat beispielsweise einen neuen AlphaDev Swap Move und einen AlphaDev Copy Move entwickelt, die zur Effizienzsteigerung beitragen. Diese Entdeckungen können auf andere Bereiche der Informatik angewendet werden und womöglich weitere Optimierungen ermöglichen.
+
+Die Erfolge von AlphaDev zeigen, dass KI-gestützte Optimierungen von Algorithmen in verschiedenen Bereichen der Informatik eingesetzt werden können. Dies eröffnet neue Möglichkeiten, wie KI in der Zukunft zur Verbesserung bestehender Technologien beitragen kann.
+
+Der Artikel mit dem Titel "I'm Afraid I Can't Do That: Predicting Prompt Refusal in Black-Box Generative Language Models" von Max Reuter und William Schulze ist eine interessante Studie über künstliche Intelligenz. Seit der Veröffentlichung von OpenAI's ChatGPT haben generative Sprachmodelle viel Aufmerksamkeit erregt. Solche Modelle sind nützlich, aber sie haben auch Probleme, zum Beispiel eingebettete Vorurteile.
+
+Die Autoren untersuchen, wie ChatGPT mit verschiedenen Arten von Anfragen umgeht. Sie testen das Modell mit 1.730 Anfragen, die beleidigend oder harmlos sind. Danach ordnen sie die Antworten in Kategorien ein: Zustimmung oder Ablehnung. Die Ergebnisse zeigen, dass Ablehnungen nicht immer leicht zu erkennen sind.
+
+Die Forscher entwickeln dann einen Ablehnungsklassifikator, der eine Genauigkeit von 92% erreicht. Damit klassifizieren sie ein größeres Datenset (10.000 Anfragen) aus der Quora Insincere Questions-Datenbank. Anschließend entwickeln sie einen Anfrageklassifikator, der vorhersagen soll, ob ChatGPT eine bestimmte Frage ablehnt, ohne die Antwort des Modells zu kennen. Dieser Anfrageklassifikator erreicht eine Genauigkeit von 76% bei manuell beschrifteten Fragen (1.009 Fragen).
+
+Die Autoren untersuchen auch die am stärksten mit Zustimmung oder Ablehnung verknüpften n-Gramme in Anfragen. Dies kann helfen, das Verhalten des Modells besser zu verstehen und möglicherweise Verbesserungen vorzunehmen.
+
+Insgesamt ist dies eine faszinierende Untersuchung der Fähigkeiten und Einschränkungen von künstlicher Intelligenz im Sprachbereich. Der Artikel zeigt, dass es noch viel zu tun gibt, um sicherzustellen, dass solche Systeme für alle Benutzer fair und effektiv sind.
+
+Der Artikel "Kami Home Kamera App zeigt plötzlich Werbung in der App" berichtet über ein Problem, das einige Benutzer der Kami Home und Yi Home App bemerkt haben. Plötzlich werden in der App arabische Tiktok-Werbungen angezeigt, und die Benutzer sind darüber verärgert. Sie fragen sich, ob es eine Möglichkeit gibt, diese Werbung zu entfernen, ohne ein Cloud-Abonnement zu erwerben.
+
+Ein Nutzer beschwert sich darüber, dass die Anzeigen nervig sind und das schnelle Zugreifen auf die Kamera im Notfall behindern. Er stellt die Frage, ob es nicht ausreichend ist, Geld für die physischen Produkte zu verdienen, ohne zusätzliche Einnahmen durch Abonnements und nun auch durch Werbung erzielen zu wollen. Ein anderer Nutzer fordert, dass denjenigen, die die Anzeigen ertragen müssen, zumindest ein kostenloses Cloud-Abonnement angeboten werden sollte.
+
+Die Entwickler der App reagieren auf die Beschwerden, indem sie anbieten, einen exklusiven Rabatt auf ihr werbefreies Abonnement zu gewähren. Sie bitten die betroffenen Benutzer, sie unter https://www.kamihome.com/contact zu kontaktieren, um weitere Hilfe zu erhalten.
+
+Einige Benutzer sind jedoch nicht bereit, ein Abonnement abzuschließen, weil sie ihre Kameras mit SD-Karten betreiben und die App nur für den Zugriff auf ihre eigenen Geräte verwenden. Ihnen wäre es lieber, wenn es eine Option gäbe, die Anzeigen ohne den Abschluss eines Abonnements zu entfernen.
+
+Insgesamt zeigt der Artikel, dass die plötzlichen Anzeigen in der Kami Home und Yi Home App für einige Benutzer ein großes Ärgernis darstellen. Die Entwickler sollten diese Bedenken ernst nehmen und möglicherweise alternative Lösungen anbieten, um ein angenehmes Nutzungserlebnis für alle Benutzer zu gewährleisten.
+
+Der Artikel "Bard wird besser in Logik und Argumentation" beschreibt die Verbesserungen von Bard, einer KI-gestützten Plattform. Bard wird in zwei Bereichen verbessert: mathematische Aufgaben und Programmieraufgaben. Außerdem verfügt Bard jetzt über eine Exportfunktion für Google Sheets. Wenn Bard zum Beispiel eine Tabelle im Text erstellt, kann diese direkt in Google Sheets exportiert werden.
+
+Bard verwendet eine neue Technik namens "implizite Codeausführung", um besser auf Fragen in den Bereichen Mathematik, Programmierung und Textmanipulation eingehen zu können. Diese Technik ermöglicht es Bard, im Hintergrund Code auszuführen und dadurch genauere Antworten auf entsprechende Fragen zu geben. Zum Beispiel kann Bard jetzt besser Fragen beantworten, wie: "Was sind die Primfaktoren von 15683615?" oder "Berechne das Wachstum meiner Ersparnisse".
+
+Die Verbesserungen in Bards Logik und Argumentation basieren auf der Kombination von zwei Denkmustern. Das erste denken ("System 1") ist schnell, intuitiv und mühelos, während das zweite Denken ("System 2") langsam, überlegt und anstrengend ist. Bei der "impliziten Codeausführung" erkennt Bard, welche Fragen von logischem Code profitieren könnten, erstellt diesen im Hintergrund und verwendet das Ergebnis, um eine genauere Antwort zu generieren.
+
+Durch diese Methode hat sich die Genauigkeit von Bards Antworten auf rechenbasierte sprachliche und mathematische Probleme in internen Testdatensätzen um etwa 30% verbessert. Es ist jedoch wichtig zu beachten, dass Bard nicht immer die richtige Lösung anbieten kann, zum Beispiel wenn der generierte Code falsch ist oder Bard den ausgeführten Code nicht in der Antwort berücksichtigt.
+
+Insgesamt sind diese Verbesserungen ein wichtiger Schritt, um Bard für Nutzer noch hilfreicher zu machen. Man kann gespannt sein, welche weiteren Neuerungen in Zukunft folgen werden.
+
+Apple hat die Anforderung eines $99 teuren Entwicklerkontos für die ersten iOS 17- und macOS 14-Betas entfernt. Früher mussten App-Entwickler ein Apple Developer-Konto bezahlen, um Zugang zu Beta-Versionen neuer Betriebssysteme zu erhalten. Jetzt können alle, die sich mit ihrer Apple ID auf der Entwicklerseite von Apple anmelden, kostenlos auf die Entwickler-Beta-Versionen von iOS 17, macOS Sonoma und anderen Apple-Betriebssystemen zugreifen.
+
+Das Einreichen von Apps im App Store und das Signieren von Apps für die Apple-Plattformen kostet jedoch immer noch $99 pro Jahr. Trotzdem müssen Enthusiasten und Tester, die Entwicklerkonten für frühen Beta-Zugang nutzen möchten, dafür nicht mehr extra bezahlen. Die öffentlichen Beta-Versionen der Betriebssysteme werden weiterhin im Juli über das Public Beta-Programm von Apple erhältlich sein.
+
+Es ist wichtig zu beachten, dass diese Beta-Betriebssysteme noch sehr fehleranfällig und anfällig für Abstürze und Kompatibilitätsprobleme sind. Daher sollten sie nicht auf Geräten installiert werden, die täglich im Einsatz sind.
+
+
+Das waren die Top 5 Artikel auf Hacker News für diese Woche. Ich hoffe, ihr habt die Zusammenfassungen in langsamem Deutsch genossen und dabei etwas gelernt. Falls ihr Fragen oder Feedback habt, lasst es uns gerne wissen. Wir wünschen euch viel Spaß beim weiteren Deutschlernen und freuen uns darauf, euch in der nächsten Folge von "Hacker News in Slow German" wiederzusehen. Bis dahin, macht's gut und bleibt neugierig!

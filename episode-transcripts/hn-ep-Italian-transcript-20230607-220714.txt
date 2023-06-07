@@ -1,0 +1,59 @@
+Ciao a tutti e benvenuti a "Hacker News in Slow Italian", il podcast ideale per gli appassionati di tecnologia che stanno imparando l'italiano! Nell'episodio di oggi, parleremo delle ultime scoperte nel mondo degli algoritmi di ordinamento, del comportamento di rifiuto nei modelli di linguaggio generativo come ChatGPT, delle leggi sulla sicurezza nazionale e della privacy, e di alcuni curiosi errori di traduzione in Windows 11. Inoltre, discuteremo delle recenti modifiche all'API di Reddit e di come queste influenzeranno gli utenti e gli sviluppatori. Seguiteci mentre esploriamo queste affascinanti notizie nel mondo della tecnologia, tutto in un italiano semplice e comprensibile. Andiamo!
+
+L'articolo "Deepmind Alphadev: Faster sorting algorithms discovered using deep RL" parla di come gli algoritmi di ordinamento più veloci sono stati scoperti grazie all'apprendimento profondo per rinforzo (deep reinforcement learning, RL). Gli algoritmi di ordinamento sono alla base di molte applicazioni informatiche e vengono utilizzati miliardi di volte ogni giorno. Pertanto, è fondamentale che questi algoritmi siano il più efficienti possibile. Tuttavia, migliorare ulteriormente l'efficienza di questi algoritmi è diventato difficile sia per gli esperti umani che per le tecniche di calcolo.
+
+Per superare queste sfide, gli autori dell'articolo hanno addestrato un nuovo agente di apprendimento profondo, chiamato AlphaDev, che è in grado di scoprire nuovi algoritmi di ordinamento e migliorarne l'efficienza. AlphaDev è basato su AlphaZero, un noto algoritmo di deep RL. Il compito di trovare un algoritmo di ordinamento migliore è stato formulato come un gioco a un giocatore e AlphaDev è stato addestrato a giocare questo gioco.
+
+AlphaDev ha scoperto nuovi algoritmi di ordinamento che superano le prestazioni dei metodi attuali progettati dagli esseri umani. Questi algoritmi sono stati integrati nella libreria di ordinamento standard LLVM C++, che è ampiamente utilizzata da milioni di utenti, tra cui università e aziende di tutto il mondo.
+
+L'articolo evidenzia inoltre come AlphaDev sia in grado di generalizzare e ottimizzare algoritmi non banali presenti nel mondo reale, come ad esempio un sottoprocedimento di deserializzazione utilizzato nella serializzazione di strutture dati. Questi risultati dimostrano il potenziale dell'approccio e la capacità di AlphaDev di adattarsi a una vasta gamma di problemi informatici.
+
+In conclusione, la ricerca presentata nell'articolo dimostra che l'intelligenza artificiale può superare l'attuale stato dell'arte nella scoperta di algoritmi di ordinamento, grazie all'utilizzo dell'apprendimento profondo per rinforzo. L'approccio proposto e gli algoritmi scoperti hanno un impatto significativo nella pratica informatica e aprono nuove opportunità per la progettazione automatizzata di algoritmi e la risoluzione di problemi computazionali complessi.
+
+Titolo dell'articolo: "I'm Afraid I Can't Do That: Prompt Refusal in Generative Language Models". 
+
+Il mondo dell'intelligenza artificiale sta crescendo rapidamente. Un esempio è il modello di linguaggio generativo ChatGPT di OpenAI. Questi modelli sono molto utili, ma presentano alcuni problemi, come il pregiudizio incorporato. A volte, i pregiudizi vengono dalla formazione del modello o dalle decisioni degli ingegneri e delle aziende.
+
+In questo studio, gli autori Max Reuter e William Schulze analizzano il comportamento di rifiuto di ChatGPT. Per farlo, hanno usato un attacco "black-box". Prima, hanno creato un elenco di richieste offensive e innocue. Poi, hanno controllato le risposte del modello per vedere quali richieste rifiutava.
+
+Hanno scoperto che il rifiuto non è sempre chiaro. Ci sono diversi tipi di rifiuti. Quindi, hanno creato un classificatore di rifiuti per insegnare al modello a riconoscerli. Questo classificatore ha raggiunto un'accuratezza del 92%. Dopo, hanno usato il classificatore per allenare un altro modello su un dataset più grande. Così, il nuovo modello può prevedere se ChatGPT rifiuterà una domanda.
+
+Il classificatore di richieste raggiunge un'accuratezza del 76% su un set di domande etichettate manualmente. Gli autori hanno esaminato i classificatori e le parole chiave per capire meglio il processo di rifiuto. I risultati dello studio aiutano a comprendere come funzionano i modelli generativi e come migliorarli.
+
+In conclusione, la ricerca di Max Reuter e William Schulze offre uno sguardo interessante sul funzionamento dei modelli di linguaggio generativo. Il loro lavoro può essere utile per migliorare questi strumenti e ridurre i pregiudizi nel futuro.
+
+Titolo dell'articolo: "La legge sulla sicurezza nazionale NL concederà automaticamente il permesso per la sorveglianza mirata".
+
+L'articolo parla di una nuova legge in Olanda. La legge si chiama "Sicurezza nazionale". Questa legge permette di controllare le persone. Il governo può guardare le email e ascoltare le telefonate.
+
+La legge è molto importante per la sicurezza del paese. Il governo vuole proteggere la gente. Ma la legge ha anche problemi. Alcune persone pensano che la legge sia cattiva. Dicono che il governo non deve controllare tutti.
+
+La legge è ancora in discussione. Non si sa se sarà approvata o no. In futuro potrebbero esserci cambiamenti. Ma per ora, la legge sulla sicurezza nazionale NL è un argomento molto discusso in Olanda.
+
+In conclusione, la legge sulla sicurezza nazionale potrebbe cambiare il modo in cui il governo olandese protegge il paese. Mentre alcuni ritengono che sia necessaria per proteggere la popolazione, altri la considerano una violazione della privacy. Solo il tempo dirà se questa legge sarà approvata e quali saranno le sue conseguenze.
+
+Titolo dell'articolo: "Windows 11 chiama un file zip 'file codice postale' in inglese UK"
+
+L'articolo parla di un curioso errore di traduzione nel nuovo sistema operativo Windows 11. Invece di chiamare un file zip con il suo nome corretto, lo chiama "file codice postale" nella versione inglese per il Regno Unito. Questo errore ha creato confusione tra gli utenti.
+
+Per risolvere questo problema, l'articolo consiglia di abilitare JavaScript nel proprio browser oppure di utilizzare un browser supportato. Si può consultare la lista dei browser supportati visitando il Centro Assistenza di Twitter. Nel caso in cui JavaScript sia già attivo, si può provare a ricaricare la pagina nel browser.
+
+Nel caso in cui l'errore persista, l'articolo suggerisce di visitare il Centro Assistenza per ulteriori informazioni. Inoltre, si possono consultare la politica sulla privacy, i termini di servizio, la politica sui cookie e le informazioni sulle pubblicità. L'articolazione menziona anche che tutte queste informazioni si riferiscono alla X Corp, la società che ha prodotto l'articolo.
+
+L'errore di traduzione può sembrare un piccolo problema, ma è importante ricordare che un file zip e un "file codice postale" possono avere funzioni molto diverse. Pertanto, è essenziale che gli utenti siano consapevoli delle differenze e seguano le istruzioni fornite nell'articolo per correggere l'errore.
+
+In conclusione, l'articolo evidenzia un errore di traduzione presente in Windows 11 e offre soluzioni per risolvere il problema. Se si riscontrano difficoltà nel risolvere l'errore, è possibile visitare il Centro Assistenza per ulteriori informazioni e supporto.
+
+Titolo dell'articolo: "Le recenti modifiche all'API di Reddit e il futuro di /r/blind".
+
+In questo articolo, l'autore parla delle recenti modifiche alle API di Reddit. Cos'è un'API? API significa "Interfaccia di programmazione delle applicazioni" ed è uno strumento utilizzato dai programmatori per accedere e lavorare con altre applicazioni, come Reddit.
+
+Le modifiche apportate alle API di Reddit mirano a limitare l'abuso da parte dei bot e migliorare l'esperienza degli utenti. In particolare, l'articolo spiega che Reddit ora applica un limite di velocità ai tentativi di accesso da parte dei bot. Questo significa che i bot non possono inviare troppe richieste in pochissimo tempo.
+
+Tuttavia, se sei una persona reale, non un bot, e il tuo browser emula un bot, potresti ricevere un avviso che ti chiede di aspettare alcuni secondi e riprovare. Per evitare questo problema, l'articolo suggerisce di modificare la stringa "user agent" del tuo browser. Questo ti permetterà di utilizzare il sito senza ricevere altri messaggi di errore.
+
+Infine, l'articolo ricorda ai programmatori di non effettuare troppe richieste e di rispettare le linee guida fornite da Reddit, come effettuare non più di una richiesta ogni due secondi. Seguire queste regole aiuterà a garantire una buona esperienza per tutti gli utenti della piattaforma.
+
+In conclusione, le recenti modifiche all'API di Reddit intendono aumentare la sicurezza e la qualità del sito. È importante che gli utenti e gli sviluppatori rispettino queste nuove regole per garantire un'esperienza migliore per tutti.
+
+Ecco fatto, amici! Questa è stata l'episodio di oggi di "Hacker News in Slow Italian". Speriamo che queste notizie siano state interessanti e utili per voi. Ci vediamo la prossima settimana con altre notizie sul mondo della tecnologia e dell'informatica. Continuate a studiare l'italiano e a migliorare il vostro livello. Arrivederci!
