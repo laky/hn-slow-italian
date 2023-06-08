@@ -5,15 +5,16 @@ import openai
 import os
 import time
 from tqdm import tqdm
+from typing import Optional
 
 import datetime
 date_time_string = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 
-test = False
+model = "gpt-3.5-turbo" # try to cut down costs by using GPT3.5
 skip_generate_text = False
 skip_narration = False
 max_retries = 5
-max_article_length = 4*3000 if test else 4*7000 # token is roughly 4 characters, so use 3000 for GPT3 for testing and 7000 for GPT4.
+max_article_length = 4*3000 if model=="gpt-3.5-turbo" else 4*7000 # token is roughly 4 characters, so use 3000 for GPT3 for testing and 7000 for GPT4.
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 language = "Italian"
@@ -34,13 +35,7 @@ playht_voice = 'it-IT-ElsaNeural'
 # playht_voice = "VickiNeural"
 
 denylist_urls = [
-    "val.town", # Seems not to parse well...
-    "lightning.ai/pages/blog", # Forbidden :( TODO: handle these errors better
-    "bloomberg.com", # Robot check :( TODO: handle these errors better
-    "whatsapp.com", # Robot check :( TODO: handle these errors better
-    "twitter.com", # js check :( TODO: handle these errors better
-    "reddit.com", # bot check :( TODO: handle these errors better
-    "aboutintel.eu", # fails with too many requests :( TODO: handle these errors better
+    # Everything should be handled in the prompt now, fingers crossed.
 ]
 
 
@@ -85,7 +80,7 @@ def make_gpt4_call(prompt: str, retry_attempt: int = 0) -> str:
 
     try:
         completion = openai.ChatCompletion.create(
-            model= "gpt-3.5-turbo" if test else "gpt-4",
+            model= model,
             messages=[
                 {"role": "user", "content": prompt}
             ]
@@ -120,7 +115,7 @@ def get_hn_links():
                         skip = True
                 if not skip:
                     articles.append((link.get('href'), link.text))
-    return articles[:number_of_articles]
+    return articles
 
 def create_introduction(episode) -> str:
     prompt = f"Imagine you are creating an episode for a podcast called \"Hacker News in Slow {language}\" that summarizes the top {number_of_articles} articles on Hacker News that should be accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}.\n\n"
@@ -136,24 +131,36 @@ def create_ending(episode) -> str:
 
     return make_gpt4_call(prompt)
 
-def summarize_article(link, index: int) -> str:
+def summarize_article(link, index: int) -> Optional[str]:
     url, title = link
     try:
         content = get_link_content(url)
+        prompt = f"Create a summary of a content on the website (usually this contains an article, but could also be a github repo or a forum). Make the summary accessible for people learning {language}. Use simple grammar, short sentences, and only the most commonly used words in {language}.\n\n"
+        prompt += f"This is the text scraped from the website:\n<text>{content}</text>\n\n"
+        prompt += f"If no substantial content wasn't returned due to an error during the scraping, return just \"ERROR\".\n\n"
+        prompt += f"Otherwise, generate an engaging and in-depth summary of the most interesting information (3-5 paragraphs long) in {language}. Use an easy-to-follow and conversational style. Start by mentioning the website's title \"{title}\"."
+        response = make_gpt4_call(prompt)
+
+        if response.lower().startswith("error"):
+            return None
+
+        return response
+
     except:
-        content = f"Unfortunately, there's no text for the article with the title {title} as it could not be downloaded. Perhaps it got too popular and the server is down. Who knows..."
-
-    prompt = f"Create a summary of an article. Make the summary accessible for people learning {language}. Use simple, short sentences, and the most common words in {language}.\n\n"
-    prompt += f"This is the text from the article:\n<text>{content}</text>\n\n"
-    prompt += f"Generate an engaging and in-depth summary (3-5 paragraphs long) in {language}. Use an easy-to-follow and conversational style. Start by mentioning the article's title \"{title}\"."
-
-    return make_gpt4_call(prompt)
+        return None
 
 def generate_episode_text() -> str:
     print("Getting links...")
     links = get_hn_links()
     print("Summarising articles...")
-    summaries = [summarize_article(link, index) for index, link in tqdm(enumerate(links))]
+    summaries = []
+    index = 0
+    while len(summaries) < number_of_articles and index < len(links):
+        summary = summarize_article(links[index], index)
+        if summary is not None:
+            summaries.append(summary)
+        index += 1
+
     content = "\n\n".join(summaries)
 
     print("Generating beginning and ending...")
@@ -196,7 +203,7 @@ if __name__ == '__main__':
         with open(text_file, "w") as f:
             f.write(text)
 
-    if not test and not skip_narration:
+    if not skip_narration:
         with open(text_file, "r") as f:
             text = f.read()
 
