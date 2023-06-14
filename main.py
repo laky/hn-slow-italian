@@ -155,16 +155,25 @@ def generate_episode_text() -> str:
     print("Summarising articles...")
     summaries = []
     index = 0
+    generated = []
+    skipped = []
     while len(summaries) < number_of_articles and index < len(links):
         summary = summarize_article(links[index], index)
         if summary is not None:
             summaries.append(summary)
+            generated.append(links[index])
+
+        else:
+            skipped.append(links[index])
+
         index += 1
 
     content = "\n\n".join(summaries)
 
     print("Generating beginning and ending...")
     transcript = create_introduction(content) + "\n\n" + content + "\n\n" + create_ending(content)
+    print("Generated links:", generated)
+    print("Skipped links:", skipped)
     return transcript
 
 def playht_narrate(text):
