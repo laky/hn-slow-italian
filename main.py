@@ -182,7 +182,7 @@ def playht_narrate(text):
     payload = {
         "content": [s for s in text.split("\n") if len(s) > 0],
         "voice": playht_voice,
-        "globalSpeed": "85",
+        "globalSpeed": "70",
         "title": file_audio,
     }
     headers = {
